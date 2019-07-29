@@ -75,11 +75,11 @@
         </li>
       
         <li>
-          <a class="nav home" href="/projects/"
+          <a class="nav home" href="/career/"
             
             
-            id="projects">
-            <i class='fas fa-code-branch fa-fw'></i>&nbsp;项目
+            id="career">
+            <i class='fas fa-code-branch fa-fw'></i>&nbsp;分类
           </a>
         </li>
       
@@ -90,7 +90,7 @@
             
             
             id="friends">
-            <i class='fas fa-link fa-fw'></i>&nbsp;友链
+            <i class='fas fa-link fa-fw'></i>&nbsp;Categories
           </a>
         </li>
       
@@ -291,9 +291,300 @@
         
           
         
+          
+        
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/2019/07/28/ts教程/">
+      ts教程
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="http://yoursite.com" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>毛西亚</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-28</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h1 id="TypeScript-教程"><a href="#TypeScript-教程" class="headerlink" title="TypeScript 教程"></a>TypeScript 教程</h1><blockquote>
+<p>人生不值得 </p>
+</blockquote>
+<h3 id="之前一直都想要找时间把ts的只是给巩固一下-，找个时间抽离一下"><a href="#之前一直都想要找时间把ts的只是给巩固一下-，找个时间抽离一下" class="headerlink" title="之前一直都想要找时间把ts的只是给巩固一下 ，找个时间抽离一下"></a>之前一直都想要找时间把ts的只是给巩固一下 ，找个时间抽离一下</h3><h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><pre><code>npm install -g typescript</code></pre><p>安装完成以后在node 命令行里面 通过 tsc dome.ts 命令 可以把 ts编译为js</p>
+<ol>
+<li>开发工具如何自动编译 ts文件  </li>
+</ol>
+<ul>
+<li>vscode<br>安装完成以后 在ts终端里面运行 tsc –init  生成typescript.config.js 的配置文件 然后修改里面的输出目录  outDir  指定输入的js目录来进行</li>
+</ul>
+<ol start="2">
+<li>在终端里面 运行任务 选择监视ts 然后可以边修改ts文件边编译成js 是不是很方便呢</li>
+</ol>
+<h2 id="2-TS-的数据类型"><a href="#2-TS-的数据类型" class="headerlink" title="2. TS 的数据类型"></a>2. TS 的数据类型</h2><p>ts中定义类型的时候会增加类型校验 在声明的时候必须指定类型</p>
+<pre><code>string 类型
+var a:string =  &apos;rerer&apos;
+number 类型 
+var b:number = 24343
+boolean 类型
+var c:boolean = true
+Array 类型 
+第一种
+var d:number[] = [1,2,3] // 定义里面的元数据都是number类型
+第二种
+var e:Array&lt;number&gt;= [11,22]</code></pre><ul>
+<li>枚举类型</li>
+</ul>
+<ul>
+<li><p>任意类型 </p>
+<p>  let a:any = 14</p>
+<p>  a =’43434’ // 不会报错</p>
+</li>
+<li><p>underfined 类型<br>var num:underfined<br>console.log(num)</p>
+</li>
+<li><p>null 类型</p>
+<pre><code>var num:null 
+var num:null | number | underfined 可以是 null number underfined</code></pre></li>
+<li><p>void<br>ts 中的void 表示没有任何类型 一般用于定义方法的时候没有返回值</p>
+<pre><code>js定义方法 没有返回值
+function fn(){
+    console.log(14232)
+}
+
+ts为了严谨 定义没有返回值的方法时用void类型 表示方法没有任何类型
+function fn():void{
+    console.log(11)
+}
+如果有返回值的话就声明返回的类型
+function fn():string{
+    console.log(11)
+}</code></pre></li>
+<li><p>never 类型 是其他类型的子类型包括 null和undefined代表从不会出现的值 这意味着never 类型只能被never类型赋值</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/技术/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>技术</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
+  
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/2019/07/28/vue-cli3-0/">
+      vue-cli3.0
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    <a href="http://yoursite.com" rel="nofollow">
+      
+        <i class="fas fa-user" aria-hidden="true"></i>
+      
+      <p>毛西亚</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-07-28</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h3 id="vue-cli3-0-的配置信息"><a href="#vue-cli3-0-的配置信息" class="headerlink" title="vue-cli3.0 的配置信息"></a>vue-cli3.0 的配置信息</h3><h4 id="7月28号-酷暑难耐，今天的太阳比之前格外的毒，砖也格外的烫手，我真他妈受够了天天窝在家打游戏的日子，闲来无事拿着我的mac跑汉堡王装会逼-学习一下vue-cli-3-0-的知识"><a href="#7月28号-酷暑难耐，今天的太阳比之前格外的毒，砖也格外的烫手，我真他妈受够了天天窝在家打游戏的日子，闲来无事拿着我的mac跑汉堡王装会逼-学习一下vue-cli-3-0-的知识" class="headerlink" title="7月28号 酷暑难耐，今天的太阳比之前格外的毒，砖也格外的烫手，我真他妈受够了天天窝在家打游戏的日子，闲来无事拿着我的mac跑汉堡王装会逼,学习一下vue-cli 3.0 的知识"></a>7月28号 酷暑难耐，今天的太阳比之前格外的毒，砖也格外的烫手，我真他妈受够了天天窝在家打游戏的日子，闲来无事拿着我的mac跑汉堡王装会逼,学习一下vue-cli 3.0 的知识</h4><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li><p>vue3.0主打无配置打包 官方称快速原型开发，通俗的说就是你不用配置任何跟打包有关的信息，只通过安装vuecli后就可以把你的vue文件打包构建，免去了繁琐的webpack配置</p>
+<pre><code>安装cli
+npm install -g @vue/cli
+安装快速开发原型插件
+npm install -g @vue/cli-service-global</code></pre></li>
+</ul>
+<p>安装完成以后 新建一个App.vue 文件 然后就可以通过vue serve 来进行运行了</p>
+<pre><code>运行项目 
+vue serve  // 默认是app.vue
+指定运行文件 
+vue serve MyComponent.vue
+打包项目 
+vue build 
+指定打包文件
+vue build MyComponent.vue</code></pre><ul>
+<li><p>创建一个项目全局配置 </p>
+<pre><code>创建一个全局项目
+vue create dome </code></pre></li>
+</ul>
+<p>接下来vue会让你选择项目配置 根据自己的需要选择具体功能  空格选中 方向键移动 回车进入下一个配置</p>
+<pre><code>babel       //babel 配置
+TypeScript  //支持typescript
+PWA         是否支持PWA配置
+Router      引入 vue—router
+vuex        引入vuex
+css         css 预处理器
+Linter      Formatter  检查代码风格
+UnitTesting Unit 测试
+E2E Testing E2E  测试</code></pre><p><img src="./img/vue1.jpg" alt="vue配置"></p>
+<ul>
+<li>被保存的 preset 将会存在用户的 home 目录下一个名为 .vuerc 的 JSON 文件里。如果你想要修改被保存的 preset / 选项，可以编辑这个文件。 你可以直接使用保存的这个preset</li>
+</ul>
+<ul>
+<li><p>使用图形化界面</p>
+<pre><code>你也可以通过 vue ui 命令以图形化界面创建和管理项目
+vue ui </code></pre></li>
+</ul>
+<p><img src="https://cli.vuejs.org/ui-new-project.png" alt="vue ui"></p>
+<ul>
+<li>解决浏览器兼容性</li>
+</ul>
+<p>1.解决css浏览器兼容性</p>
+<pre><code>browserslist
+在package.json</code></pre><p>2.解决js兼容性</p>
+<pre><code>// babel.config.js 在babel.config.js 里面进行兼容新的配置
+module.exports = {
+presets: [
+    [&apos;@vue/app&apos;, {
+    polyfills: [
+        &apos;es6.promise&apos;,
+        &apos;es6.symbol&apos;
+    ]
+    }]
+]
+}</code></pre>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/技术/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>技术</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -545,7 +836,7 @@ git config --global user.email &apos;邮箱&apos;</code></pre></li>
           
         
           
-            <a href="https://github.com/xaoxuu"
+            <a href="https://github.com/maixiya0724"
               class="social fab fa-github flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -553,7 +844,7 @@ git config --global user.email &apos;邮箱&apos;</code></pre></li>
           
         
           
-            <a href="https://music.163.com/#/user/home?id=63035382"
+            <a href="https://music.163.com/#/user/home?id=112806906"
               class="social fas fa-headphones-alt flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -676,6 +967,27 @@ git config --global user.email &apos;邮箱&apos;</code></pre></li>
           
           
             
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-fire fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;Hot Tags</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blog/tags/"
+    title="blog/tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/tags/技术/" style="font-size: 14px; color: #999">技术</a>
+    </div>
+  </section>
+
 
           
         
@@ -698,8 +1010,8 @@ git config --global user.email &apos;邮箱&apos;</code></pre></li>
     
       target="_blank"
     
-    href="https://music.163.com/#/user/home?id=63035382"
-    title="https://music.163.com/#/user/home?id=63035382">
+    href="http://music.163.com/playlist?id=2404583938&userid=112806906"
+    title="http://music.163.com/playlist?id=2404583938&userid=112806906">
     <i class="far fa-heart fa-fw"></i></a>
   
 </header>
@@ -714,7 +1026,7 @@ git config --global user.email &apos;邮箱&apos;</code></pre></li>
     data-mode="circulation"
     data-server="netease"
     data-type="playlist"
-    data-id="2615636388"
+    data-id="2404583938"
     data-volume="0.7">
   </div>
   <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
@@ -755,7 +1067,7 @@ git config --global user.email &apos;邮箱&apos;</code></pre></li>
         
       
         
-          <a href="https://github.com/xaoxuu"
+          <a href="https://github.com/maixiya0724"
             class="social fab fa-github flat-btn"
             target="_blank"
             rel="external nofollow noopener noreferrer">
@@ -763,7 +1075,7 @@ git config --global user.email &apos;邮箱&apos;</code></pre></li>
         
       
         
-          <a href="https://music.163.com/#/user/home?id=63035382"
+          <a href="https://music.163.com/#/user/home?id=112806906"
             class="social fas fa-headphones-alt flat-btn"
             target="_blank"
             rel="external nofollow noopener noreferrer">
