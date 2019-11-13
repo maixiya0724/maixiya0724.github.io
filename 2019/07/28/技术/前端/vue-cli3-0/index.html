@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>vue-cli3.0 - 毛西亚的博客</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="记录生活的所见所闻">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="vue-cli3.0 的配置信息7月28号 酷暑难耐，今天的太阳比之前格外的毒，砖也格外的烫手，我真他妈受够了天天窝在家打游戏的日子，闲来无事拿着我的mac跑汉堡王装会逼,学习一下vue-cli 3.0 的知识">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue-cli3.0">
+<meta property="og:url" content="http://yoursite.com/2019/07/28/技术/前端/vue-cli3-0/index.html">
+<meta property="og:site_name" content="毛西亚的博客">
+<meta property="og:description" content="vue-cli3.0 的配置信息7月28号 酷暑难耐，今天的太阳比之前格外的毒，砖也格外的烫手，我真他妈受够了天天窝在家打游戏的日子，闲来无事拿着我的mac跑汉堡王装会逼,学习一下vue-cli 3.0 的知识">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2019/07/28/技术/前端/vue-cli3-0/img/vue1.jpg">
+<meta property="og:image" content="https://cli.vuejs.org/ui-new-project.png">
+<meta property="og:updated_time" content="2019-11-12T10:01:55.378Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue-cli3.0">
+<meta name="twitter:description" content="vue-cli3.0 的配置信息7月28号 酷暑难耐，今天的太阳比之前格外的毒，砖也格外的烫手，我真他妈受够了天天窝在家打游戏的日子，闲来无事拿着我的mac跑汉堡王装会逼,学习一下vue-cli 3.0 的知识">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/28/技术/前端/vue-cli3-0/img/vue1.jpg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1505827_k6fd86fxksp.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css ">
+  <link rel="stylesheet" href="/css/style.css?v=1573628999079">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2019/01/13/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="毛西亚" class="mdui-btn mdui-btn-icon"><img src="https://iconfont.alicdn.com/t/1573548190528.jpeg@100h_100w.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="毛西亚">
+            <img src="https://iconfont.alicdn.com/t/1573548190528.jpeg@100h_100w.jpg" alt="毛西亚">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>6</div>
+        <div><span>标签</span>5</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/hexo/">hexo</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/忆/">忆</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/技术/">技术</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">标签云</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
+      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/忆/" style="font-size: 10px;">忆</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 毛西亚
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+            <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg">
+        
+        <h1>vue-cli3.0</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年07月28日</a>
+    <a><i class="nexmoefont icon-areachart"></i>580 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+    
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/技术/">技术</a>
+    
+    
+      <a class="nexmoefont icon-tag-fill -link" href="/tags/vue/">vue</a>
+    
+  </div>
+  <article>
+    <h3 id="vue-cli3-0-的配置信息"><a href="#vue-cli3-0-的配置信息" class="headerlink" title="vue-cli3.0 的配置信息"></a>vue-cli3.0 的配置信息</h3><h4 id="7月28号-酷暑难耐，今天的太阳比之前格外的毒，砖也格外的烫手，我真他妈受够了天天窝在家打游戏的日子，闲来无事拿着我的mac跑汉堡王装会逼-学习一下vue-cli-3-0-的知识"><a href="#7月28号-酷暑难耐，今天的太阳比之前格外的毒，砖也格外的烫手，我真他妈受够了天天窝在家打游戏的日子，闲来无事拿着我的mac跑汉堡王装会逼-学习一下vue-cli-3-0-的知识" class="headerlink" title="7月28号 酷暑难耐，今天的太阳比之前格外的毒，砖也格外的烫手，我真他妈受够了天天窝在家打游戏的日子，闲来无事拿着我的mac跑汉堡王装会逼,学习一下vue-cli 3.0 的知识"></a>7月28号 酷暑难耐，今天的太阳比之前格外的毒，砖也格外的烫手，我真他妈受够了天天窝在家打游戏的日子，闲来无事拿着我的mac跑汉堡王装会逼,学习一下vue-cli 3.0 的知识</h4><a id="more"></a>
+
+
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><ul>
+<li><p>vue3.0主打无配置打包 官方称快速原型开发，通俗的说就是你不用配置任何跟打包有关的信息，只通过安装vuecli后就可以把你的vue文件打包构建，免去了繁琐的webpack配置</p>
+<pre><code>安装cli
+npm install -g @vue/cli
+安装快速开发原型插件
+npm install -g @vue/cli-service-global</code></pre></li>
+</ul>
+<p>安装完成以后 新建一个App.vue 文件 然后就可以通过vue serve 来进行运行了</p>
+<pre><code>运行项目 
+vue serve  // 默认是app.vue
+指定运行文件 
+vue serve MyComponent.vue
+打包项目 
+vue build 
+指定打包文件
+vue build MyComponent.vue</code></pre><ul>
+<li><p>创建一个项目全局配置 </p>
+<pre><code>创建一个全局项目
+vue create dome </code></pre></li>
+</ul>
+<p>接下来vue会让你选择项目配置 根据自己的需要选择具体功能  空格选中 方向键移动 回车进入下一个配置</p>
+<pre><code>babel       //babel 配置
+TypeScript  //支持typescript
+PWA         是否支持PWA配置
+Router      引入 vue—router
+vuex        引入vuex
+css         css 预处理器
+Linter      Formatter  检查代码风格
+UnitTesting Unit 测试
+E2E Testing E2E  测试</code></pre><p><img src="./img/vue1.jpg" alt="vue配置"></p>
+<ul>
+<li>被保存的 preset 将会存在用户的 home 目录下一个名为 .vuerc 的 JSON 文件里。如果你想要修改被保存的 preset / 选项，可以编辑这个文件。 你可以直接使用保存的这个preset</li>
+</ul>
+<ul>
+<li><p>使用图形化界面</p>
+<pre><code>你也可以通过 vue ui 命令以图形化界面创建和管理项目
+vue ui </code></pre></li>
+</ul>
+<p><img src="https://cli.vuejs.org/ui-new-project.png" alt="vue ui"></p>
+<ul>
+<li>解决浏览器兼容性</li>
+</ul>
+<p>1.解决css浏览器兼容性</p>
+<pre><code>browserslist
+在package.json</code></pre><p>2.解决js兼容性</p>
+<pre><code>// babel.config.js 在babel.config.js 里面进行兼容新的配置
+module.exports = {
+presets: [
+    [&apos;@vue/app&apos;, {
+    polyfills: [
+        &apos;es6.promise&apos;,
+        &apos;es6.symbol&apos;
+    ]
+    }]
+]
+}
+
+&lt;!-- 解决css兼容性 --&gt;
+修改.browserslistrc 文件里面的内容
+
+&quot;&gt; 1%&quot;,
+&quot;Android &gt;= 4.0&quot;,
+&quot;IOS &gt;=4.0&quot;,
+&quot;last 5 Firefox versions&quot;,
+&quot;Firefox &gt;=10&quot;,
+&quot;Chrome &gt;10&quot;,
+&quot;Safari &gt;= 6&quot;,
+&quot;ie &gt;=9&quot;</code></pre><p>3.vue.config.js 是一个可选的配置文件</p>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>毛西亚<br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/07/28/技术/前端/vue-cli3-0/" title="http://yoursite.com/2019/07/28/技术/前端/vue-cli3-0/" target="_blank" rel="noopener">http://yoursite.com/2019/07/28/技术/前端/vue-cli3-0/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1573628999083"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+
+</html>

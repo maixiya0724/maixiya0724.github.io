@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>ts教程 - 毛西亚的博客</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="记录生活的所见所闻">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="TypeScript 教程 蒹葭苍苍，白露未霜，所谓伊人，在水一方.">
+<meta name="keywords" content="技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ts教程">
+<meta property="og:url" content="http://yoursite.com/2019/07/28/技术/前端/ts教程/index.html">
+<meta property="og:site_name" content="毛西亚的博客">
+<meta property="og:description" content="TypeScript 教程 蒹葭苍苍，白露未霜，所谓伊人，在水一方.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-13T07:09:49.756Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ts教程">
+<meta name="twitter:description" content="TypeScript 教程 蒹葭苍苍，白露未霜，所谓伊人，在水一方.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1505827_k6fd86fxksp.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css ">
+  <link rel="stylesheet" href="/css/style.css?v=1573628999071">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2019/01/13/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="毛西亚" class="mdui-btn mdui-btn-icon"><img src="https://iconfont.alicdn.com/t/1573548190528.jpeg@100h_100w.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="毛西亚">
+            <img src="https://iconfont.alicdn.com/t/1573548190528.jpeg@100h_100w.jpg" alt="毛西亚">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>6</div>
+        <div><span>标签</span>5</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/hexo/">hexo</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/忆/">忆</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/技术/">技术</a>
+          <span class="category-list-count">4</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">标签云</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
+      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/忆/" style="font-size: 10px;">忆</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 毛西亚
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+            <img src="https://i.loli.net/2019/01/13/5c3aec85a4343.jpg">
+        
+        <h1>ts教程</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年07月28日</a>
+    <a><i class="nexmoefont icon-areachart"></i>960 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+    
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/技术/">技术</a>
+    
+    
+      <a class="nexmoefont icon-tag-fill -link" href="/tags/技术/">技术</a>
+    
+  </div>
+  <article>
+    <h1 id="TypeScript-教程"><a href="#TypeScript-教程" class="headerlink" title="TypeScript 教程"></a>TypeScript 教程</h1><blockquote>
+<p>蒹葭苍苍，白露未霜，所谓伊人，在水一方.</p>
+</blockquote>
+<a id="more"></a>
+
+<h3 id="之前一直都想要找时间把ts的只是给巩固一下-，找个时间抽离一下"><a href="#之前一直都想要找时间把ts的只是给巩固一下-，找个时间抽离一下" class="headerlink" title="之前一直都想要找时间把ts的只是给巩固一下 ，找个时间抽离一下"></a>之前一直都想要找时间把ts的只是给巩固一下 ，找个时间抽离一下</h3><h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><pre><code>npm install -g typescript</code></pre><p>安装完成以后在node 命令行里面 通过 tsc dome.ts 命令 可以把 ts编译为js</p>
+<ol>
+<li>开发工具如何自动编译 ts文件  </li>
+</ol>
+<ul>
+<li>vscode<br>安装完成以后 在ts终端里面运行 tsc –init  生成typescript.config.js 的配置文件 然后修改里面的输出目录  outDir  指定输入的js目录来进行</li>
+</ul>
+<ol start="2">
+<li>在终端里面 运行任务 选择监视ts 然后可以边修改ts文件边编译成js 是不是很方便呢</li>
+</ol>
+<h2 id="2-TS-的数据类型"><a href="#2-TS-的数据类型" class="headerlink" title="2. TS 的数据类型"></a>2. TS 的数据类型</h2><p>ts中定义类型的时候会增加类型校验 在声明的时候必须指定类型</p>
+<pre><code>string 类型
+var a:string =  &apos;rerer&apos;
+number 类型 
+var b:number = 24343
+boolean 类型
+var c:boolean = true
+Array 类型 
+第一种
+var d:number[] = [1,2,3] // 定义里面的元数据都是number类型
+第二种
+var e:Array&lt;number&gt;= [11,22]</code></pre><ul>
+<li>枚举类型</li>
+</ul>
+<ul>
+<li><p>任意类型 </p>
+<p>  let a:any = 14</p>
+<p>  a =’43434’ // 不会报错</p>
+</li>
+<li><p>underfined 类型<br>var num:underfined<br>console.log(num)</p>
+</li>
+<li><p>null 类型</p>
+<pre><code>var num:null 
+var num:null | number | underfined 可以是 null number underfined</code></pre></li>
+<li><p>void<br>ts 中的void 表示没有任何类型 一般用于定义方法的时候没有返回值</p>
+<pre><code>js定义方法 没有返回值
+function fn(){
+    console.log(14232)
+}
+
+ts为了严谨 定义没有返回值的方法时用void类型 表示方法没有任何类型
+function fn():void{
+    console.log(11)
+}
+如果有返回值的话就声明返回的类型
+function fn():string{
+    console.log(11)
+}</code></pre></li>
+<li><p>never 类型 是其他类型的子类型包括 null和undefined代表从不会出现的值 这意味着never 类型只能被never类型赋值</p>
+</li>
+</ul>
+<h2 id="3-变量声明"><a href="#3-变量声明" class="headerlink" title="3.变量声明"></a>3.变量声明</h2><h4 id="ts的变量声明方式和js的变量声明方式一样，有var-let-const-等三种方式"><a href="#ts的变量声明方式和js的变量声明方式一样，有var-let-const-等三种方式" class="headerlink" title="ts的变量声明方式和js的变量声明方式一样，有var let const 等三种方式"></a>ts的变量声明方式和js的变量声明方式一样，有var let const 等三种方式</h4><h2 id="4-接口"><a href="#4-接口" class="headerlink" title="4.接口"></a>4.接口</h2><h4 id="在面向对象语言中，接口（Interfaces）是一个很重要的概念，它是对行为的抽象，而具体如何行动需要由类（classes）去实现（implements）。"><a href="#在面向对象语言中，接口（Interfaces）是一个很重要的概念，它是对行为的抽象，而具体如何行动需要由类（classes）去实现（implements）。" class="headerlink" title="在面向对象语言中，接口（Interfaces）是一个很重要的概念，它是对行为的抽象，而具体如何行动需要由类（classes）去实现（implements）。"></a>在面向对象语言中，接口（Interfaces）是一个很重要的概念，它是对行为的抽象，而具体如何行动需要由类（classes）去实现（implements）。</h4><pre><code>//定义一个接口
+interface Person{
+    name:string,
+    age:number,
+    job?:string, // 可选属性 不是必须拥有的属性
+    readonly reayRead:number, // 只读属性，表明该属性只能在创建的时候修改值，以后不能修改
+    propName : any,  // 任意类型
+}</code></pre><h2 id="5-类"><a href="#5-类" class="headerlink" title="5.类"></a>5.类</h2><p>####传统的JavaScript程序使用函数和基于原型的继承来创建可重用的组件，但对于熟悉使用面向对象方式的程序员来讲就有些棘手，因为他们用的是基于类的继承并且对象是由类构建出来的。 从ECMAScript 2015，也就是ECMAScript 6开始，JavaScript程序员将能够使用基于类的面向对象的方式。 使用TypeScript，我们允许开发者现在就使用这些特性，并且编译后的JavaScript可以在所有主流浏览器和平台上运行，而不需要等到下个JavaScript版本</p>
+<pre><code>class Animal {
+    public name: string; // 公共属性 默认为public
+    private obj :string;  // 私有属性 当成员被标记为private的时候 他就不能在声明他的类的外部访问 例如 new Animal(&quot;Cat&quot;).name 报错
+    readonly age:number; // 只读属性 只读属性必须在声明时或构造函数里被初始化
+}</code></pre><p>##6.函数</p>
+<h4 id="和JavaScript一样，TypeScript函数可以创建有名字的函数和匿名函数。-你可以随意选择适合应用程序的方式，不论是定义一系列API函数还是只使用一次的函数。"><a href="#和JavaScript一样，TypeScript函数可以创建有名字的函数和匿名函数。-你可以随意选择适合应用程序的方式，不论是定义一系列API函数还是只使用一次的函数。" class="headerlink" title="和JavaScript一样，TypeScript函数可以创建有名字的函数和匿名函数。 你可以随意选择适合应用程序的方式，不论是定义一系列API函数还是只使用一次的函数。"></a>和JavaScript一样，TypeScript函数可以创建有名字的函数和匿名函数。 你可以随意选择适合应用程序的方式，不论是定义一系列API函数还是只使用一次的函数。</h4><pre><code>// 匿名函数
+let add = function(x,y){
+    return x+y
+}
+//命名函数 
+function add(x,y){
+    return x+y
+}</code></pre><h4 id="6-1函数类型"><a href="#6-1函数类型" class="headerlink" title="6.1函数类型"></a>6.1函数类型</h4><p>我们可以为函数添加类型</p>
+<pre><code>function add(x:number,y:number):number{ // 该函数为number类型
+    return x+y
+}</code></pre>
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>毛西亚<br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/07/28/技术/前端/ts教程/" title="http://yoursite.com/2019/07/28/技术/前端/ts教程/" target="_blank" rel="noopener">http://yoursite.com/2019/07/28/技术/前端/ts教程/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1573628999077"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+
+</html>
