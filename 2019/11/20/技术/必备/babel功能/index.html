@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>babel7.0 组成部分 - 毛西亚的博客</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="记录生活的所见所闻">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="babel7.0 组成部分">
+<meta name="keywords" content="毛西亚">
+<meta property="og:type" content="article">
+<meta property="og:title" content="babel7.0 组成部分">
+<meta property="og:url" content="http://yoursite.com/2019/11/20/技术/必备/babel功能/index.html">
+<meta property="og:site_name" content="毛西亚的博客">
+<meta property="og:description" content="babel7.0 组成部分">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-11-20T12:30:52.113Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="babel7.0 组成部分">
+<meta name="twitter:description" content="babel7.0 组成部分">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1505827_k6fd86fxksp.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css ">
+  <link rel="stylesheet" href="/css/style.css?v=1574253060649">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2019/01/13/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="毛西亚" class="mdui-btn mdui-btn-icon"><img src="https://iconfont.alicdn.com/t/1573548190528.jpeg@100h_100w.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="毛西亚">
+            <img src="https://iconfont.alicdn.com/t/1573548190528.jpeg@100h_100w.jpg" alt="毛西亚">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>9</div>
+        <div><span>标签</span>5</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/hexo/">hexo</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/忆/">忆</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/技术/">技术</a>
+          <span class="category-list-count">6</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">标签云</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
+      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/忆/" style="font-size: 10px;">忆</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2019 毛西亚
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="https://hbimg.huabanimg.com/f2fdafee17634d2b0ff4ef87dd1633e0699254a0d67e-WkKgtF_fw658">
+        
+        <h1>babel7.0 组成部分</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月20日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.1k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
+    
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/技术/">技术</a>
+    
+    
+  </div>
+  <article>
+    <h1 id="babel7-0-组成部分"><a href="#babel7-0-组成部分" class="headerlink" title="babel7.0 组成部分"></a>babel7.0 组成部分</h1><a id="more"></a>
+<h2 id="1-babel-core-必装"><a href="#1-babel-core-必装" class="headerlink" title="1.@babel/core (必装)"></a>1.@babel/core (必装)</h2><pre><code>babel核心包，编译器，提供转换的API</code></pre><h2 id="2-babel-cli"><a href="#2-babel-cli" class="headerlink" title="2.@babel/cli"></a>2.@babel/cli</h2><pre><code>babel的命令行工具,通过命令对js代码进行转义</code></pre><p>具体命令使用:<a href="https://babeljs.io/docs/en/babel-cli" target="_blank" rel="noopener">https://babeljs.io/docs/en/babel-cli</a><br>启动babel/cli 编译器  /node_modules/.bin/babel 非全局安装<br>将src 目录下的所有js 文件编译成并且输出到 lib 目录下<br>./node_modules/.bin/babel src –out-dir lib<br>要在每次更改文件时编译文件，请使用–watch或-w选项：<br>./node_modules/.bin/babel –watch –out-file script-compiled.js</p>
+<h2 id="3-babel-polyfill"><a href="#3-babel-polyfill" class="headerlink" title="3.@babel/polyfill"></a>3.@babel/polyfill</h2><pre><code>注意babel7中的@babel/polyfill 是 @babel/runtime-corejs2的别名
+详细地址:https://babeljs.io/docs/en/v7-migration</code></pre><p>babel 7 中说明删除提案polyfill @babel/polyfill 结合 @babel/runtime-corejs2 + @babel/plugin-transform-runtime 插件使用</p>
+<pre><code>babel 编译时只转换语法，几乎可以编译所有时新的 JavaScript 语法，但并不会转化BOM里面不兼容的API
+比如 Promise,Set,Symbol,Array.from,async 等等的一些API
+这时候就需要 polyfill 来转转化这些API 进行转译 *是通过向全局对象和内置对象的prototype上添加方法实现的，会造成全局变量污染，结合@babel/plugin-transform-runtime 可避免全局污染，使用方式查看下文
+
+
+//.babelrc
+{
+    &quot;plugins&quot;: [
+        [&quot;@babel/plugin-transform-runtime&quot;,{&quot;corejs&quot;: 2}]
+    ]
+}</code></pre><h3 id="4-babel-register"><a href="#4-babel-register" class="headerlink" title="4.@babel/register"></a>4.@babel/register</h3><p>使用Babel的方法之一是通过require钩子。require钩子将自己绑定到节点require并自动编译文件。</p>
+<p>在node中 使用@babel/register 让其在require 加载文件的时候babel 自动动态编译</p>
+<pre><code>require(&quot;@babel/register&quot;);
+require(&quot;./test.js&quot;)</code></pre><p>5.Presets</p>
+<p>如 env,stage-0,stage-1等等<br>其中的 env 表示 babel会加载 es6 相关的编译模块，然后 stage-0 表示的是什么呢？<br>stage 系列集合了一些对 es7 的草案支持的插件，由于是草案，所以作为插件的形式提供。</p>
+<p>以下下官方给我们提供的自带的presets:</p>
+<pre><code>babel 无法编译的ES5新语法 详情请移致：https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js</code></pre><h2 id="6-babel-preset-env-必装"><a href="#6-babel-preset-env-必装" class="headerlink" title="6.@babel/preset-env *必装"></a>6.@babel/preset-env *必装</h2><p>包含如下标准：</p>
+<pre><code>@babel/preset-es2015，@babel/preset-es2016和@babel/preset-es2017
+
+//ES3
+member-expression-literals
+property-literals
+reserved-words
+
+//ES5
+property-mutators
+ES2015
+arrow-functions
+block-scoped-functions
+block-scoping
+classes
+computed-properties
+destructuring
+duplicate-keys
+for-of
+function-name
+instanceof
+literals
+new-target
+object-super
+parameters
+shorthand-properties
+spread
+sticky-regex
+template-literals
+typeof-symbol
+unicode-regex
+
+//ES2016
+exponentiation-operator
+
+//ES2017
+async-to-generator</code></pre><h2 id="7-plugins"><a href="#7-plugins" class="headerlink" title="7.plugins"></a>7.plugins</h2><p>转换以插件的形式出现，插件是小型JavaScript程序，它指示Babel如何对代码进行转换。 </p>
+<h3 id="7-1-babel-plugin-transform-runtime-必装"><a href="#7-1-babel-plugin-transform-runtime-必装" class="headerlink" title="7.1  @babel/plugin-transform-runtime  *必装"></a>7.1  @babel/plugin-transform-runtime  *必装</h3><p>所有帮助程序都将引用该模块，@babel/runtime以避免编译输出中的重复。运行时将编译到您的构建中。它会将重复的已require 模块方式引入。</p>
+<h3 id="7-2-babel-runtime-corejs2-编译自带ES5语法"><a href="#7-2-babel-runtime-corejs2-编译自带ES5语法" class="headerlink" title="7.2 @babel/runtime-corejs2 编译自带ES5语法"></a>7.2 @babel/runtime-corejs2 编译自带ES5语法</h3><pre><code>如Object.assign 等 根老版本库@babel/polyfill 类似。一般配合@babel/plugin-transform-runtime 使用.详细配置使用见 .babelrc 文件
+
+
+# install the runtime as a dependency
+npm install @babel/runtime-corejs2
+# install the plugin as a devDependency
+npm install @babel/plugin-transform-runtime --save-dev</code></pre><h3 id="7-3-babel-plugin-transform-object-assign"><a href="#7-3-babel-plugin-transform-object-assign" class="headerlink" title="7.3 @babel/plugin-transform-object-assign"></a>7.3 @babel/plugin-transform-object-assign</h3><pre><code>用来编译 Object.assign</code></pre><h3 id="7-4-babel-plugin-proposal-class-properties-解析类的属性"><a href="#7-4-babel-plugin-proposal-class-properties-解析类的属性" class="headerlink" title="7.4@babel/plugin-proposal-class-properties  解析类的属性"></a>7.4@babel/plugin-proposal-class-properties  解析类的属性</h3><pre><code>class Bork {
+//Property initializer syntax
+instanceProperty = &quot;bork&quot;;
+boundFunction = () =&gt; {
+  return this.instanceProperty;
+};
+
+//Static class properties
+static staticProperty = &quot;babelIsCool&quot;;
+static staticFunction = function() {
+  return Bork.staticProperty;
+};
+}
+
+let myBork = new Bork;
+
+//Property initializers are not on the prototype.
+console.log(myBork.__proto__.boundFunction); // &gt; undefined
+
+//Bound functions are bound to the class instance.
+console.log(myBork.boundFunction.call(undefined)); // &gt; &quot;bork&quot;
+
+//Static function exists on the class.
+console.log(Bork.staticFunction()); // &gt; &quot;babelIsCool&quot;</code></pre><h3 id="7-5-babel-plugin-proposal-decorators-装饰器"><a href="#7-5-babel-plugin-proposal-decorators-装饰器" class="headerlink" title="7.5 @babel/plugin-proposal-decorators 装饰器"></a>7.5 @babel/plugin-proposal-decorators 装饰器</h3><pre><code>@annotation
+class MyClass { }
+
+function annotation(target) {
+target.annotated = true;
+}</code></pre><h2 id="8-配置文件-babelrc"><a href="#8-配置文件-babelrc" class="headerlink" title="8.配置文件.babelrc"></a>8.配置文件.babelrc</h2><pre><code>{
+&quot;presets&quot;: [&quot;@babel/preset-env&quot;],
+&quot;plugins&quot;: [
+    [&quot;@babel/plugin-transform-runtime&quot;,{&quot;corejs&quot;: 2}],
+    &quot;@babel/plugin-transform-object-assign&quot;,
+    [&quot;@babel/plugin-proposal-decorators&quot;, { &quot;legacy&quot;: true }],
+    &quot;@babel/plugin-proposal-class-properties&quot;
+]
+}</code></pre><h2 id="9-package-json"><a href="#9-package-json" class="headerlink" title="9.package.json"></a>9.package.json</h2><pre><code>{
+&quot;name&quot;: &quot;babel&quot;,
+&quot;version&quot;: &quot;1.0.0&quot;,
+&quot;description&quot;: &quot;&quot;,
+&quot;main&quot;: &quot;index.js&quot;,
+&quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+},
+&quot;author&quot;: &quot;&quot;,
+&quot;license&quot;: &quot;ISC&quot;,
+&quot;devDependencies&quot;: {
+    &quot;@babel/cli&quot;: &quot;^7.1.2&quot;,
+    &quot;@babel/core&quot;: &quot;^7.1.2&quot;,
+    &quot;@babel/preset-env&quot;: &quot;^7.1.0&quot;,
+    &quot;@babel/plugin-transform-runtime&quot;: &quot;^7.1.0&quot;,
+    &quot;@babel/runtime-corejs2&quot;: &quot;^7.1.2&quot;,
+    &quot;@babel/plugin-proposal-class-properties&quot;: &quot;^7.1.0&quot;,
+    &quot;@babel/plugin-proposal-decorators&quot;: &quot;^7.1.2&quot;,
+    &quot;@babel/plugin-transform-object-assign&quot;: &quot;^7.0.0&quot;
+},
+&quot;dependencies&quot;: {
+}</code></pre>
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>毛西亚<br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/11/20/技术/必备/babel功能/" title="http://yoursite.com/2019/11/20/技术/必备/babel功能/" target="_blank" rel="noopener">http://yoursite.com/2019/11/20/技术/必备/babel功能/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1574253060662"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+
+</html>

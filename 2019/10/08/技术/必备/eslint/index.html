@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="毛西亚的博客">
 <meta property="og:description" content="eslit 配合vscode 自动修复语法错误  秋风清，秋月明，落叶聚还散，寒鸦栖复惊，相知相见知何日，此时此刻难为情    – 金庸">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-13T02:19:32.205Z">
+<meta property="og:updated_time" content="2019-11-20T07:38:59.961Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="eslint">
 <meta name="twitter:description" content="eslit 配合vscode 自动修复语法错误  秋风清，秋月明，落叶聚还散，寒鸦栖复惊，相知相见知何日，此时此刻难为情    – 金庸">
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1505827_k6fd86fxksp.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css ">
-  <link rel="stylesheet" href="/css/style.css?v=1573636868217">
+  <link rel="stylesheet" href="/css/style.css?v=1574253060709">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>8</div>
+        <div><span>文章</span>9</div>
         <div><span>标签</span>5</div>
         <div><span>分类</span>3</div>
     </div>
@@ -113,7 +113,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/技术/">技术</a>
-          <span class="category-list-count">5</span>
+          <span class="category-list-count">6</span>
         </li>
 
         
@@ -163,8 +163,8 @@
     </div>
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年10月08日</a>
-    <a><i class="nexmoefont icon-areachart"></i>5.3k 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 25 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>6k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 29 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/技术/">技术</a>
     
@@ -209,6 +209,7 @@ prettier - code formatter 代码格式化插件，非常牛，可以自定义格
    ...
 }   </code></pre><p>package.json 需要安装的插件 </p>
 <pre><code>&quot;eslint&quot;: &quot;^5.16.0&quot;,
+&quot;babel-eslint&quot;: &quot;^10.0.3&quot;,
 &quot;eslint-config-standard&quot;: &quot;^14.1.0&quot;,
 &quot;eslint-plugin-import&quot;: &quot;^2.18.2&quot;,
 &quot;eslint-plugin-node&quot;: &quot;^10.0.0&quot;,
@@ -712,6 +713,91 @@ prettier - code formatter 代码格式化插件，非常牛，可以自定义格
                 &quot;yield-star-spacing&quot;:2,
                 // 允许使用==
                 &apos;eqeqeq&apos;: 0,
+
+                //vue具体规则
+
+                &apos;vue/no-dupe-keys&apos;: 2,
+                // 禁止出现语法错误
+                &apos;vue/no-parsing-error&apos;: 2,
+                // 禁止覆盖保留字
+                // &apos;vue/no-reservered-keys&apos;: 2,
+                // 组件的 data 属性的值必须是一个函数
+                // @off 没必要限制
+                &apos;vue/no-shared-component-data&apos;: 2,
+                // 可以让 &lt;template&gt; 使用 key 属性
+                &apos;vue/no-template-key&apos;: &apos;off&apos;,
+                // render 函数必须有返回值
+                &apos;vue/require-render-return&apos;: 2,
+                // prop 的默认值必须匹配它的类型
+                &apos;vue/require-valid-default-prop&apos;: 2,
+                // 计算属性必须有返回值
+                &apos;vue/return-in-computed-property&apos;: 2,
+                // template 的根节点必须合法
+                &apos;vue/valid-template-root&apos;: 2,
+                // v-bind 指令必须合法
+                &apos;vue/valid-v-bind&apos;: 2,
+                // v-cloak 指令必须合法
+                &apos;vue/valid-v-cloak&apos;: 2,
+                // v-else-if 指令必须合法
+                &apos;vue/valid-v-else-if&apos;: 2,
+                // v-else 指令必须合法
+                &apos;vue/valid-v-else&apos;: 2,
+                // v-for 指令必须合法
+                &apos;vue/valid-v-for&apos;: 2,
+                // v-html 指令必须合法
+                &apos;vue/valid-v-html&apos;: 2,
+                // v-if 指令必须合法
+                &apos;vue/valid-v-if&apos;: 2,
+                // v-model 指令必须合法
+                &apos;vue/valid-v-model&apos;: 2,
+                // v-on 指令必须合法
+                &apos;vue/valid-v-on&apos;: 2,
+                // v-once 指令必须合法
+                &apos;vue/valid-v-once&apos;: 2,
+                // v-pre 指令必须合法
+                &apos;vue/valid-v-pre&apos;: 2,
+                // v-show 指令必须合法
+                &apos;vue/valid-v-show&apos;: 2,
+                // v-text 指令必须合法
+                &apos;vue/valid-v-text&apos;: 2,
+
+                &apos;vue/html-end-tags&apos;: &apos;off&apos;,
+                // 计算属性禁止包含异步方法
+                &apos;vue/no-async-in-computed-properties&apos;: 2,
+                // 禁止出现难以理解的 v-if 和 v-for
+                &apos;vue/no-confusing-v-for-v-if&apos;: 2,
+                // 禁止出现重复的属性
+                &apos;vue/no-duplicate-attributes&apos;: 2,
+                // 禁止在计算属性中对属性修改, 是具体情况而定，有时候可能会用到，列为warn；
+                &apos;vue/no-side-effects-in-computed-properties&apos;: 1,
+                // 禁止在 &lt;textarea&gt; 中出现 {{message}}
+                &apos;vue/no-textarea-mustache&apos;: 2,
+                // 组件的属性必须为一定的顺序
+                &apos;vue/order-in-components&apos;: [2, {
+                        &quot;order&quot;: [
+                        &quot;el&quot;,
+                        [&quot;name&quot;, &quot;parent&quot;],
+                        &quot;functional&quot;,
+                        &quot;delimiters&quot;,
+                        [&quot;components&quot;, &quot;directives&quot;, &quot;filters&quot;],
+                        [&quot;extends&quot;, &quot;mixins&quot;],
+                        [&quot;model&quot;, &quot;props&quot;, &quot;propsData&quot;],
+                        [&quot;data&quot;, &quot;computed&quot;],
+                        [&quot;watch&quot;, &quot;LIFECYCLE_HOOKS&quot;],
+                        &quot;methods&quot;,
+                        [&quot;template&quot;, &quot;render&quot;, &quot;renderError&quot;]
+                        ]
+                }],
+                // &lt;component&gt; 必须有 v-bind:is
+                &apos;vue/require-component-is&apos;: 2,
+                // prop 必须有类型限制
+                &apos;vue/require-prop-types&apos;: 2,
+                // v-for 指令的元素必须有 v-bind:key
+                &apos;vue/require-v-for-key&apos;: 2,
+                // @fixable 限制 v-bind 的风格, 统一简写形式
+                &apos;vue/v-bind-style&apos;: 2,
+                // @fixable 限制 v-on 的风格，统一简写形式
+                &apos;vue/v-on-style&apos;: 2,
         }
 
 }</code></pre>
@@ -761,7 +847,7 @@ prettier - code formatter 代码格式化插件，非常牛，可以自定义格
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1573636868226"></script>
+<script src="/js/app.js?v=1574253060720"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
