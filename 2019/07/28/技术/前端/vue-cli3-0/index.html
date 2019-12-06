@@ -21,7 +21,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/07/28/技术/前端/vue-cli3-0/img/vue1.jpg">
 <meta property="og:image" content="https://cli.vuejs.org/ui-new-project.png">
-<meta property="og:updated_time" content="2019-11-12T10:01:55.378Z">
+<meta property="og:updated_time" content="2019-11-25T08:12:48.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-cli3.0">
 <meta name="twitter:description" content="vue-cli3.0 的配置信息7月28号 酷暑难耐，今天的太阳比之前格外的毒，砖也格外的烫手，我真他妈受够了天天窝在家打游戏的日子，闲来无事拿着我的mac跑汉堡王装会逼,学习一下vue-cli 3.0 的知识">
@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1505827_k6fd86fxksp.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css ">
-  <link rel="stylesheet" href="/css/style.css?v=1574253128585">
+  <link rel="stylesheet" href="/css/style.css?v=1575619359974">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -166,8 +166,8 @@
     </div>
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年07月28日</a>
-    <a><i class="nexmoefont icon-areachart"></i>580 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>797 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 3 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/技术/">技术</a>
     
@@ -246,8 +246,13 @@ presets: [
 &quot;Firefox &gt;=10&quot;,
 &quot;Chrome &gt;10&quot;,
 &quot;Safari &gt;= 6&quot;,
-&quot;ie &gt;=9&quot;</code></pre><p>3.vue.config.js 是一个可选的配置文件</p>
-
+&quot;ie &gt;=9&quot;</code></pre><p>3.vue.config.js 是一个可选的配置文件<br>        const path = require(“path”);<br>        function resolve(dir) {<br>        return path.join(__dirname, dir);<br>        }<br>        module.exports = {<br>                // publicPath: process.env.NODE_ENV === ‘production’ ? ‘//view.youth.cn/20190909BI/‘ : ‘’,<br>                publicPath: “./“,<br>                lintOnSave: false,<br>                outputDir: “dist”,<br>                assetsDir: “static”,<br>                indexPath: “index.html”,<br>                filenameHashing: true,<br>                chainWebpack: config =&gt; {<br>                config.entry.app = [“babel-polyfill”, “./src/main.js”];<br>                // 修复HMR<br>                config.resolve.symlinks(true);<br>                // 修复 Lazy loading routes Error<br>                config.plugin(“html”).tap(<br>                args =&gt; {<br>                        args[0].chunksSortMode = “none”;<br>                        return args;<br>                },<br>                config.resolve.alias<br>                        .set(“@”, resolve(“src”))<br>                        .set(“@components”, resolve(“src/components”))<br>                        .set(“@api”, resolve(“src/api”))<br>                        .set(“@view”, resolve(“src/view”))<br>                        .set(“@assets”, resolve(“src/assets”))<br>                );<br>                if (process.env.NODE_ENV === “production”) {<br>                const externals = {<br>                        vue: “Vue”,<br>                        “vue-router”: “VueRouter”,<br>                        vuex: “Vuex”<br>                };<br>                config.externals(externals);<br>                // 引入静态CDN<br>                const cdn = {<br>                        css: [],<br>                        js: [<br>                        // vue<br>                        “//view.youth.cn/common/vue/vue.min.js”<br>                        ]<br>                };<br>                config.plugin(“html”).tap(args =&gt; {<br>                        args[0].cdn = cdn;<br>                        return args;<br>                });<br>                }<br>                },<br>                css: {<br>                // extract: true,<br>                sourceMap: false,<br>                loaderOptions: {},<br>                modules: false<br>                },<br>                devServer: {<br>                // 代理<br>                proxy: {<br>                “/api”: {<br>                        target: “<a href="https://kd.youth.cn&quot;" target="_blank" rel="noopener">https://kd.youth.cn&quot;</a>,<br>                        ws: true,<br>                        changeOrigin: true,<br>                        secure: false,<br>                        pathRewrite: {<br>                        “^/api”: “”<br>                        }<br>                }<br>                }<br>                }<br>        };</p>
+<p>在 index 里面 循环引入cdn资源 </p>
+<pre><code>&lt;% if (process.env.NODE_ENV === &apos;production&apos;) { %&gt;
+&lt;% for(var js of htmlWebpackPlugin.options.cdn.js) { %&gt;
+&lt;script src=&quot;&lt;%=js%&gt;&quot;&gt;&lt;/script&gt;
+&lt;% } %&gt;
+&lt;% } %&gt;</code></pre>
   </article>
   
     
@@ -294,7 +299,7 @@ presets: [
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1574253128591"></script>
+<script src="/js/app.js?v=1575619359980"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
