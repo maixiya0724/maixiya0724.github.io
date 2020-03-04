@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>js基础 - 毛西亚的博客</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="记录生活的所见所闻">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="10 行代码，9 行报错，8 个警告，吓得我的七魂六魄，已五零四散了，这感觉岂能是三言两语能说清，一气之下归零了.  教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。">
+<meta name="keywords" content="技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js基础">
+<meta property="og:url" content="http://yoursite.com/2019/12/10/技术/js基础/闭包和原型/index.html">
+<meta property="og:site_name" content="毛西亚的博客">
+<meta property="og:description" content="10 行代码，9 行报错，8 个警告，吓得我的七魂六魄，已五零四散了，这感觉岂能是三言两语能说清，一气之下归零了.  教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/181509180812624.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/181510403153733.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/181512068463597.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/181512489403338.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/181635468939277.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/181636252689920.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/181637013624694.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/182012548152475.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/182013450814552.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/182014022217881.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/221744084828533.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/221744319354566.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/221745066078791.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/221746583578531.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/230840377174282.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/230841277489133.png">
+<meta property="og:image" content="http://file.weixinkd.com/mxy/20191211173945.jpg">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/231451530452221.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/231452183579852.png">
+<meta property="og:image" content="https://images0.cnblogs.com/blog/138012/201409/231452462177631.png">
+<meta property="og:updated_time" content="2019-12-13T06:51:29.135Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js基础">
+<meta name="twitter:description" content="10 行代码，9 行报错，8 个警告，吓得我的七魂六魄，已五零四散了，这感觉岂能是三言两语能说清，一气之下归零了.  教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。">
+<meta name="twitter:image" content="https://images0.cnblogs.com/blog/138012/201409/181509180812624.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1505827_k6fd86fxksp.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css ">
+  <link rel="stylesheet" href="/css/style.css?v=1583338377149">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2019/01/13/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="毛西亚" class="mdui-btn mdui-btn-icon"><img src="https://iconfont.alicdn.com/t/1573548190528.jpeg@100h_100w.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="毛西亚">
+            <img src="https://iconfont.alicdn.com/t/1573548190528.jpeg@100h_100w.jpg" alt="毛西亚">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>12</div>
+        <div><span>标签</span>5</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/hexo/">hexo</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/忆/">忆</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/技术/">技术</a>
+          <span class="category-list-count">10</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">标签云</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
+      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/忆/" style="font-size: 10px;">忆</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 毛西亚
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="http://source.upupoo.com/theme/1783830887/previewFix.jpg">
+        
+        <h1>js基础</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月10日</a>
+    <a><i class="nexmoefont icon-areachart"></i>3.2k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 13 分钟</a>
+    
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/技术/">技术</a>
+    
+    
+      <a class="nexmoefont icon-tag-fill -link" href="/tags/技术/">技术</a>
+    
+  </div>
+  <article>
+    <blockquote>
+<p>10 行代码，9 行报错，8 个警告，吓得我的七魂六魄，已五零四散了，这感觉岂能是三言两语能说清，一气之下归零了.</p>
+</blockquote>
+<p>教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。</p>
+<a id="more"></a>
+
+<h3 id="1-基本类型和引用类型"><a href="#1-基本类型和引用类型" class="headerlink" title="1.基本类型和引用类型"></a>1.基本类型和引用类型</h3><h4 id="基本类型：undefined、null、string、number、boolean、symbo（ES6）"><a href="#基本类型：undefined、null、string、number、boolean、symbo（ES6）" class="headerlink" title="* 基本类型：undefined、null、string、number、boolean、symbo（ES6）"></a>* 基本类型：undefined、null、string、number、boolean、symbo（ES6）</h4><ul>
+<li>基本类型的变量是存放在栈内存（Stack）里的</li>
+<li>基本数据类型的值是按值访问的</li>
+<li>基本类型的值是不可变的</li>
+<li>基本类型的比较是它们的值的比较</li>
+</ul>
+<p>基本类型的值可以用 typeof 来判断</p>
+<h4 id="引用类型：Object、Array、RegExp、Date、Function"><a href="#引用类型：Object、Array、RegExp、Date、Function" class="headerlink" title="* 引用类型：Object、Array、RegExp、Date、Function"></a>* 引用类型：Object、Array、RegExp、Date、Function</h4><ul>
+<li>引用类型的值是保存在堆内存（Heap）中的对象（Object）</li>
+<li>引用类型的值是按引用访问的</li>
+<li>引用类型的值是可变的</li>
+<li>引用类型的比较是引用的比较</li>
+</ul>
+<p>引用类型的值可以用instanceof 来判断</p>
+<p>引用类型的值是保存在堆内存（Heap）中的对象（Object）</p>
+<h3 id="2-对象"><a href="#2-对象" class="headerlink" title="2.对象"></a>2.对象</h3><blockquote>
+<p>对象–若干属性的集合。</p>
+</blockquote>
+<p>对象就是很多属性的集合，包括方法，方法也是一种属性，因为他的属性表示为键值对的形式，js中的对象可以任务的扩展属性，没有class的约束。</p>
+<h4 id="对象都是通过函数创建的-而函数却又是一种对象-函数和对象到底是什么关系啊？"><a href="#对象都是通过函数创建的-而函数却又是一种对象-函数和对象到底是什么关系啊？" class="headerlink" title="* 对象都是通过函数创建的 ,而函数却又是一种对象,函数和对象到底是什么关系啊？"></a>* 对象都是通过函数创建的 ,而函数却又是一种对象,函数和对象到底是什么关系啊？</h4><h3 id="3-函数与对象"><a href="#3-函数与对象" class="headerlink" title="3.函数与对象"></a>3.函数与对象</h3><p>函数也有prototype属性。这个prototype得属性值是一个对象(属性的集合),默认只有一个叫做constructor的属性,指向这个函数的本身.(打印fn.constructor)就是函数本身的代码.我们可以在prototype中自定义新增自己的属性,然后通过构造函数的方式来进行新建对象.</p>
+<p>任何一个对象都有一个隐藏属性  <code>__proto__</code> ，这个属性引用了创建这个对象的函数的prototype,也就是该对象的构造函数的prototype,这里的<code>__proto__</code>，就叫做隐式原型.</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/181509180812624.png" alt="image"></p>
+<p>如上图,o1是一个对象，对象都有一个<code>__proto__</code>的属性,指向创建这个对象的函数的prototype,函数都有一个<code>prototype</code>的属性,<code>prototype</code>是一个对象，默认有一个<code>constructor</code>的属性,指向这个函数本身,即 function Object,然后每一个函数都有<code>prototype</code>,即Object.prototype，这样就形成了一个循环关系,当你打印Object.prototype时，里面有一个<code>constructor</code>,<code>constructor</code>即这个函数本身,下面又有prototype,然后以此循环不断嵌套.</p>
+<p>每一个函数function都有一个prototype,即原型,每一个对象都有一个<strong>proto</strong>，即隐式原型。这个<strong>proto</strong>,是一个隐藏的属性,js不希望开发者用到这个属性值,有的低版本浏览器甚至不支持这个属性值.但是我们还是可以直接打印出来</p>
+<p>即,每个对象都有一个<strong>proto</strong>属性，指向创建该对象的函数的prototype;</p>
+<p>在说明“Object prototype”之前，先说一下自定义函数的prototype。自定义函数的prototype本质上就是和 var obj = {} 是一样的，都是被Object创建，所以它的<strong>proto</strong>指向的就是Object.prototype。<br><code>但是Object.prototype确实一个特例——它的__proto__指向的是null，切记切记！</code></p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/181510403153733.png" alt="image"></p>
+<p>解释:f1,f2是由函数Foo创建,他们的<code>__proto__</code>指向 函数 Foo的<code>prototype</code>,prototype下面的constructor指向函数Foo本身,因为prototype也是一个对象,对象也有<code>__proto__</code>的属性，所有 Foo的<code>__proto__</code>，指向Object的<code>prototype</code>，而Object也是一个对象，他的<code>__proto__</code>是 <code>null</code>,</p>
+<p>o1,o2是通过new Object创建的,他们的<code>__proto__</code>，指向Obecjt的<code>prototype</code>，Obecjt的<code>__proto__</code>是null。</p>
+<p>因为函数也是一种对象，所有函数也有<strong>proto</strong> 的属性,这个属性引用了创建这个函数的prototype,最终的函数都是由Function创建的.</p>
+<p>总结就是 <code>每一个函数都有prototype,属性，即原型,prototype的属性值是一个对象,默认只有一个叫做constructor的属性,指向这个函数的本身,每一个对象都有一个 __proto__的属性,即隐式原型,指向创建这个对象的函数的prototype.函数也是一个对象，所以也拥有__proto__，属性,指向函数Fucntion,函数也是一个对象，也有__proto__ 属性,Object的prototype，Object也是对象，它的__proto__指向的是null</code></p>
+<pre><code>function fn(x,y) {
+    return x+y
+}
+console.log(fn(10,20))
+
+var fn1 = new Function(&apos;x&apos;,&apos;y&apos;,&apos;return x+y&apos;)
+console.log(fn1(10,20))</code></pre><p>上面代码中第一种方式是比较传统的函数创建方式,第二种是用new Function创建的;</p>
+<p>好了，根据上面说的一句话——对象的<strong>proto</strong>指向的是创建它的函数的prototype，就会出现：<code>Object.__proto__ === Function.prototype</code>。用一个图来表示。</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/181512068463597.png" alt="image"></p>
+<p>上图中，很明显的标出了：自定义函数Foo.<strong>proto</strong>指向Function.prototype，Object.<strong>proto</strong>指向Function.prototype，唉，怎么还有一个……Function.<strong>proto</strong>指向Function.prototype？这不成了循环引用了？</p>
+<p>对！是一个环形结构。</p>
+<p>其实稍微想一下就明白了。Function也是一个函数，函数是一种对象，也有<strong>proto</strong>属性。既然是函数，那么它一定是被Function创建。所以——Function是被自身创建的。所以它的<strong>proto</strong>指向了自身的Prototype。</p>
+<p>最后一个问题：Function.prototype指向的对象，它的<strong>proto</strong>是不是也指向Object.prototype？</p>
+<p>答案是肯定的。因为Function.prototype指向的对象也是一个普通的被Object创建的对象，所以也遵循基本的规则</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/181512489403338.png" alt="image"></p>
+<h3 id="4-instanceof"><a href="#4-instanceof" class="headerlink" title="4.instanceof"></a>4.instanceof</h3><p>对于值类型，你可以通过typeof判断，string/number/boolean都很清楚，但是typeof在判断到引用类型的时候，返回值只有object/function，你不知道它到底是一个object对象，还是数组，还是new Number等等。</p>
+<p>这个时候就需要用到instanceof</p>
+<pre><code>function Foo() {}
+var f1 = new Foo()
+console.log(f1 instanceof Foo) // true
+console.log(f1 instanceof Object) // true</code></pre><p>上图中，f1这个对象是被Foo创建，但是“f1 instanceof Object”为什么是true呢？</p>
+<p>至于为什么过会儿再说，先把instanceof判断的规则告诉大家。根据以上代码看下图：</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/181635468939277.png" alt="image"></p>
+<p>Instanceof运算符的第一个变量是一个对象，暂时称为A；第二个变量一般是一个函数，暂时称为B。</p>
+<p>Instanceof的判断队则是：<code>沿着A的__proto__这条线来找，同时沿着B的prototype这条线来找，如果两条线能找到同一个引用，即同一个对象，那么就返回true。如果找到终点还未重合，则返回false</code>。</p>
+<p>按照以上规则，大家看看“ f1 instanceof Object ”这句代码是不是true？ 根据上图很容易就能看出来，就是true。</p>
+<p>通过上以规则，你可以解释很多比较怪异的现象，例如：</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/181636252689920.png" alt="image"></p>
+<p>这些看似很混乱的东西，答案却都是true，这是为何？</p>
+<p>上一节咱们贴了好多的图片，其实那些图片是可以联合成一个整体的，即：</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/181637013624694.png" alt="image"></p>
+<p>问题又出来了。Instanceof这样设计，到底有什么用？到底instanceof想表达什么呢？</p>
+<p>重点就这样被这位老朋友给引出来了——继承——原型链。</p>
+<p>即，instanceof表示的就是一种继承关系，或者原型链的结构。</p>
+<h3 id="5-继承"><a href="#5-继承" class="headerlink" title="5.继承"></a>5.继承</h3><p>javascript中的继承是通过原型链来体现的。先看几句代码</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/182012548152475.png" alt="image"></p>
+<p>以上代码中，f1是Foo函数new出来的对象，f1.a是f1对象的基本属性，f1.b是怎么来的呢？——从Foo.prototype得来，因为f1.<strong>proto</strong>指向的是Foo.prototype</p>
+<p><code>访问一个对象的属性时，先在基本属性中查找，如果没有，再沿着__proto__这条链向上找，这就是原型链</code></p>
+<p>如图</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/182013450814552.png" alt="image"></p>
+<p>上图中，访问f1.b时，f1的基本属性中没有b，于是沿着<strong>proto</strong>找到了Foo.prototype.b。</p>
+<p>那么我们在实际应用中如何区分一个属性到底是基本的还是从原型中找到的呢？大家可能都知道答案了——hasOwnProperty，特别是在for…in…循环中，一定要注意。</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/182014022217881.png" alt="image"></p>
+<p><code>f1本身没有hasOwnProperty，它是从Object.prototype中继承过来的,对象的原型链是沿着__proto__这条线走的，因此在查找f1.hasOwnProperty属性时，就会顺着原型链一直查找到Object.prototype</code></p>
+<p>由于所有的对象的原型链都会找到Object.prototype，因此所有的对象都会有Object.prototype的方法。这就是所谓的“继承”。<br>当然这只是一个例子，你可以自定义函数和对象来实现自己的继承。</p>
+<h3 id="6-执行上下文"><a href="#6-执行上下文" class="headerlink" title="6.执行上下文"></a>6.执行上下文</h3><p>在js代码执行之前,浏览器会做一些准备工作,其中就包含对变量的声明,而不是赋值,变量赋值是在赋值语句执行的时候进行的.如下图<br>第一种情况:</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/221744084828533.png" alt="image"></p>
+<p>第二种情况: </p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/221744319354566.png" alt="image"></p>
+<p>有js开发经验的朋友应该都知道，你无论在哪个位置获取this，都是有值的。至于this的取值情况，比较复杂，会专门拿出一篇文章来讲解。</p>
+<p>与第一种情况不同的是：第一种情况只是对变量进行声明（并没有赋值），而此种情况直接给this赋值。这也是“准备工作”情况要做的事情之一</p>
+<p>第三种情况:</p>
+<p>需要注意代码注释中的两个名词——“函数表达式”和“函数声明”。虽然两者都很常用，但是这两者在“准备工作”时，却是两种待遇。</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/221745066078791.png" alt="image"></p>
+<p>好了，“准备工作”介绍完毕。</p>
+<p>我们总结一下，在“准备工作”中完成了哪些工作</p>
+<ul>
+<li>变量,函数表达式 – 变量声明，默认赋值为 undefined;</li>
+<li>this – 赋值 </li>
+<li>函数声明  – 赋值 </li>
+</ul>
+<p><code>这三种数据的准备情况我们称之为“执行上下文”或者“执行上下文环境”</code>。</p>
+<blockquote>
+<p><code>任何问题，都要去追根溯源，要知道这个问题是真正出自哪一块知识点，要真正去理解。光靠背诵是没用的</code></p>
+</blockquote>
+<p>细心的朋友可能会发现，我们上面所有的例子都是在全局环境下执行的</p>
+<p>其实，javascript在执行一个代码段之前，都会进行这些“准备工作”来生成执行上下文。这个“代码段”其实分三种情况——全局代码，函数体，eval代码，代码段就是一段文本形式的代码</p>
+<ul>
+<li>全局代码就是写在script标签里面的代码 </li>
+<li>eval代码接收的也是一段文本形式的代码.</li>
+<li>函数体是代码段因为函数在创建时，本质上是new Function 得来的,其中需要传入一个文本形式的参数作为函数体.</li>
+</ul>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/221746583578531.png" alt="image"></p>
+<p>如果在函数中，除了以上数据之外，还会有其他数据。先看以下代码</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/230840377174282.png" alt="image"></p>
+<p>以上代码展示了在函数体的语句执行之前，arguments变量和函数的参数都已经被赋值。从这里可以看出，函数每被调用一次，都会产生一个新的执行上下文环境。因为不同的调用可能就会有不同的参数。</p>
+<p>另外一点不同在于，函数在定义的时候（不是调用的时候），就已经确定了函数体内部自由变量的作用域。至于“自由变量”和“作用域”是后面要专门拿出来讲述的重点，这里就先点到为止。用一个例子说明一下：</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/230841277489133.png" alt="image"></p>
+<p><img src="http://file.weixinkd.com/mxy/20191211173945.jpg" alt="image"></p>
+<h3 id="7-this"><a href="#7-this" class="headerlink" title="7.this"></a>7.this</h3><p>在此再强调一遍一个非常重要的知识点:<code>在函数中this到底取何值，是在函数真正被调用执行的时候确定的，函数定义的时候确定不了</code>,因为this的取值是执行上下文环境的一部分，每次调用函数，都会产生一个新的执行上下文环境。</p>
+<h4 id="7-1-构造函数"><a href="#7-1-构造函数" class="headerlink" title="7.1 构造函数"></a>7.1 构造函数</h4><p>所谓构造函数就是用来new对象的函数。其实严格来说，所有的函数都可以new一个对象，但是有些函数的定义是为了new一个对象，而有些函数则不是。另外注意，构造函数的函数名第一个字母大写（规则约定）。例如：Object、Array、Function等。</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/231451530452221.png" alt="image"></p>
+<p>以上代码中，如果函数作为构造函数用，那么其中的this就代表它即将new出来的对象。<br>注意，以上仅限new Foo()的情况，即Foo函数作为构造函数的情况。如果直接调用Foo函数，而不是new Foo()，情况就大不一样了。</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/231452183579852.png" alt="image"></p>
+<h4 id="7-2-函数作为对象的一个属性"><a href="#7-2-函数作为对象的一个属性" class="headerlink" title="7.2 函数作为对象的一个属性"></a>7.2 函数作为对象的一个属性</h4><p>如果函数作为对象的一个属性时，<code>并且作为对象的一个属性被调用时</code>，函数中的this指向该对象。</p>
+<p><img src="https://images0.cnblogs.com/blog/138012/201409/231452462177631.png" alt="image"></p>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>毛西亚<br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/12/10/技术/js基础/闭包和原型/" title="http://yoursite.com/2019/12/10/技术/js基础/闭包和原型/" target="_blank" rel="noopener">http://yoursite.com/2019/12/10/技术/js基础/闭包和原型/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1583338377161"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+
+</html>

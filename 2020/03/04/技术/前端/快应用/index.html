@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+  
+  <title>快应用教程 - 毛西亚的博客</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="记录生活的所见所闻">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/png">
+  <meta name="description" content="快应用所踩的坑记录一下快应用所踩的坑，快应用兼容性是在是太差了,快应用IDE有自己的一套开发模板，开发者可选择适合自己的模板来进行开发快应用官方文档">
+<meta name="keywords" content="技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="快应用教程">
+<meta property="og:url" content="http://yoursite.com/2020/03/04/技术/前端/快应用/index.html">
+<meta property="og:site_name" content="毛西亚的博客">
+<meta property="og:description" content="快应用所踩的坑记录一下快应用所踩的坑，快应用兼容性是在是太差了,快应用IDE有自己的一套开发模板，开发者可选择适合自己的模板来进行开发快应用官方文档">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-03-04T16:08:11.797Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="快应用教程">
+<meta name="twitter:description" content="快应用所踩的坑记录一下快应用所踩的坑，快应用兼容性是在是太差了,快应用IDE有自己的一套开发模板，开发者可选择适合自己的模板来进行开发快应用官方文档">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1505827_k6fd86fxksp.css">
+  
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css ">
+  <link rel="stylesheet" href="/css/style.css?v=1583338377170">
+</head>
+
+<body class="mdui-drawer-body-left">
+  
+  <div id="nexmoe-background">
+    <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2019/01/13/5c3aec85a4343.jpg)"></div>
+    <div class="mdui-appbar mdui-shadow-0">
+      <div class="mdui-toolbar">
+        <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+        <div class="mdui-toolbar-spacer"></div>
+        <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+        <a href="/" title="毛西亚" class="mdui-btn mdui-btn-icon"><img src="https://iconfont.alicdn.com/t/1573548190528.jpeg@100h_100w.jpg"></a>
+       </div>
+    </div>
+  </div>
+  <div id="nexmoe-header">
+      <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="毛西亚">
+            <img src="https://iconfont.alicdn.com/t/1573548190528.jpeg@100h_100w.jpg" alt="毛西亚">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>12</div>
+        <div><span>标签</span>5</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <ul class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+    </ul>
+    <aside id="nexmoe-sidebar">
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">社交按钮</h3>
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/20238211" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a>
+    </div>
+</div>
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/hexo/">hexo</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/忆/">忆</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/技术/">技术</a>
+          <span class="category-list-count">10</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">标签云</h3>
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud">
+      <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/忆/" style="font-size: 10px;">忆</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a>
+    </div>
+    
+  </div>
+
+  
+  
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2020 毛西亚
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://nexmoe.com/hexo-theme-nexmoe.html" target="_blank">Nexmoe</a>
+    </div>
+</div><!-- .nexmoe-drawer -->
+  </div>
+  <div id="nexmoe-content">
+    <div class="nexmoe-primary">
+        <div class="nexmoe-post">
+    <div class="nexmoe-post-cover"> 
+        
+        <img src="https://statres.quickapp.cn/quickapp/show/img/191211/5df0a4784298a.png">
+        
+        <h1>快应用教程</h1>
+    </div>
+  <div class="nexmoe-post-meta">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年03月04日</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.6k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 6 分钟</a>
+    
+      <a class="nexmoefont icon-appstore-fill -link" href="/categories/技术/">技术</a>
+    
+    
+      <a class="nexmoefont icon-tag-fill -link" href="/tags/技术/">技术</a>
+    
+  </div>
+  <article>
+    <h1 id="快应用所踩的坑"><a href="#快应用所踩的坑" class="headerlink" title="快应用所踩的坑"></a>快应用所踩的坑</h1><h3 id="记录一下快应用所踩的坑，快应用兼容性是在是太差了-快应用IDE有自己的一套开发模板，开发者可选择适合自己的模板来进行开发"><a href="#记录一下快应用所踩的坑，快应用兼容性是在是太差了-快应用IDE有自己的一套开发模板，开发者可选择适合自己的模板来进行开发" class="headerlink" title="记录一下快应用所踩的坑，快应用兼容性是在是太差了,快应用IDE有自己的一套开发模板，开发者可选择适合自己的模板来进行开发"></a>记录一下快应用所踩的坑，快应用兼容性是在是太差了,快应用IDE有自己的一套开发模板，开发者可选择适合自己的模板来进行开发</h3><h4 id="快应用官方文档"><a href="#快应用官方文档" class="headerlink" title="快应用官方文档"></a><a href="https://bbs.quickapp.cn/forum.php?mod=viewthread&tid=838" target="_blank" rel="noopener">快应用官方文档</a></h4><a id="more"></a>
+
+<h5 id="1-很多属性不能用，只能用flex布局，position几乎不能用，只能在html结构修改stack来达到定位，px是自适应的，没有em，em，支持百分比，其他超多的属性都不支持，1050不支持定位属性"><a href="#1-很多属性不能用，只能用flex布局，position几乎不能用，只能在html结构修改stack来达到定位，px是自适应的，没有em，em，支持百分比，其他超多的属性都不支持，1050不支持定位属性" class="headerlink" title="1.很多属性不能用，只能用flex布局，position几乎不能用，只能在html结构修改stack来达到定位，px是自适应的，没有em，em，支持百分比，其他超多的属性都不支持，1050不支持定位属性."></a>1.很多属性不能用，只能用flex布局，position几乎不能用，只能在html结构修改stack来达到定位，px是自适应的，没有em，em，支持百分比，其他超多的属性都不支持，1050不支持定位属性.</h5><h5 id="2-文本只能在text和label标签中，否则不显示，且这两个标签不能有嵌套"><a href="#2-文本只能在text和label标签中，否则不显示，且这两个标签不能有嵌套" class="headerlink" title="2.文本只能在text和label标签中，否则不显示，且这两个标签不能有嵌套"></a>2.文本只能在text和label标签中，否则不显示，且这两个标签不能有嵌套</h5><h5 id="3-图片是image标签-一般最好用网络图片，因为快应用要求包最大为1M，"><a href="#3-图片是image标签-一般最好用网络图片，因为快应用要求包最大为1M，" class="headerlink" title="3.图片是image标签,一般最好用网络图片，因为快应用要求包最大为1M，"></a>3.图片是image标签,一般最好用网络图片，因为快应用要求包最大为1M，</h5><h5 id="4-background-属性不能连写"><a href="#4-background-属性不能连写" class="headerlink" title="4.background 属性不能连写"></a>4.background 属性不能连写</h5><h5 id="5-接口的-content-type-不能是-application-javascript"><a href="#5-接口的-content-type-不能是-application-javascript" class="headerlink" title="5.接口的 content-type 不能是 application/javascript"></a>5.接口的 content-type 不能是 application/javascript</h5><h5 id="6-华为加载器-和-厂商联盟的有区别，有超多的坑-有很多接口在厂商联盟上使用没问题，在华为加载器上不行，华为渲染机制更严格，很多联盟可以的操作在华为上报错"><a href="#6-华为加载器-和-厂商联盟的有区别，有超多的坑-有很多接口在厂商联盟上使用没问题，在华为加载器上不行，华为渲染机制更严格，很多联盟可以的操作在华为上报错" class="headerlink" title="6.华为加载器 和 厂商联盟的有区别，有超多的坑  有很多接口在厂商联盟上使用没问题，在华为加载器上不行，华为渲染机制更严格，很多联盟可以的操作在华为上报错"></a>6.华为加载器 和 厂商联盟的有区别，有超多的坑  有很多接口在厂商联盟上使用没问题，在华为加载器上不行，华为渲染机制更严格，很多联盟可以的操作在华为上报错</h5><h5 id="7-tabs的滚动会有bug，内容没有超出也可以滚动，在用tabs的时候，tab-content里面的list高度自动识别错误，不是父元素的高度，设置height-100-也没用，所以当内容很少的时候依然可以滚动，解决办法是自己用div写tabs，不用其tabs组件"><a href="#7-tabs的滚动会有bug，内容没有超出也可以滚动，在用tabs的时候，tab-content里面的list高度自动识别错误，不是父元素的高度，设置height-100-也没用，所以当内容很少的时候依然可以滚动，解决办法是自己用div写tabs，不用其tabs组件" class="headerlink" title="7.tabs的滚动会有bug，内容没有超出也可以滚动，在用tabs的时候，tab-content里面的list高度自动识别错误，不是父元素的高度，设置height: 100%也没用，所以当内容很少的时候依然可以滚动，解决办法是自己用div写tabs，不用其tabs组件"></a>7.tabs的滚动会有bug，内容没有超出也可以滚动，在用tabs的时候，tab-content里面的list高度自动识别错误，不是父元素的高度，设置height: 100%也没用，所以当内容很少的时候依然可以滚动，解决办法是自己用div写tabs，不用其tabs组件</h5><h5 id="8-切换类名改变样式的时候，类名必须是目标元素上，不然没效果，可能是偶现，在某些场景下"><a href="#8-切换类名改变样式的时候，类名必须是目标元素上，不然没效果，可能是偶现，在某些场景下" class="headerlink" title="8.切换类名改变样式的时候，类名必须是目标元素上，不然没效果，可能是偶现，在某些场景下"></a>8.切换类名改变样式的时候，类名必须是目标元素上，不然没效果，可能是偶现，在某些场景下</h5><h5 id="9-for循环的value和index位置与vue相反"><a href="#9-for循环的value和index位置与vue相反" class="headerlink" title="9.for循环的value和index位置与vue相反"></a>9.for循环的value和index位置与vue相反</h5><h5 id="10-list-item的问题"><a href="#10-list-item的问题" class="headerlink" title="10.list-item的问题"></a>10.list-item的问题</h5><ul>
+<li><p>有type属性，且是必填的，相同type的必须要有相同的结构</p>
+</li>
+<li><p>因为上一条，所以 list-item 里面不能用 if, 最好用 show 代替</p>
+</li>
+<li><p>在循环渲染list-item的时候，里面不要再for循环，会很慢，甚至影响后面东西的加载</p>
+</li>
+</ul>
+<h5 id="11-show-只能用-true-和-false"><a href="#11-show-只能用-true-和-false" class="headerlink" title="11.show 只能用 true 和 false"></a>11.show 只能用 true 和 false</h5><ul>
+<li>如果是非布尔值的变量，先转换成布尔值，不然没效果</li>
+</ul>
+<h5 id="12-input-标签没有失焦-blur-事件"><a href="#12-input-标签没有失焦-blur-事件" class="headerlink" title="12.input 标签没有失焦(blur)事件"></a>12.input 标签没有失焦(blur)事件</h5><ul>
+<li>在我的一个项目中，返回一个有input标签的页面，它自动触发了该input的focus事件<br>且在联盟引擎上是部分情况如此（同一个页面），在华为加载器上是全部会触发</li>
+</ul>
+<h5 id="13-有时候接口会莫名其妙的报错，甚至是接口数据已经返回了还是报错"><a href="#13-有时候接口会莫名其妙的报错，甚至是接口数据已经返回了还是报错" class="headerlink" title="13.有时候接口会莫名其妙的报错，甚至是接口数据已经返回了还是报错"></a>13.有时候接口会莫名其妙的报错，甚至是接口数据已经返回了还是报错</h5><ul>
+<li>用setTimeout，200ms都行，很多莫名其妙的问题都可以解决</li>
+</ul>
+<h5 id="14-渲染接口返回的数据报错"><a href="#14-渲染接口返回的数据报错" class="headerlink" title="14.渲染接口返回的数据报错"></a>14.渲染接口返回的数据报错</h5><ul>
+<li>在华为加载器上更明显</li>
+<li>例如接口返回了 userInfo： {name: ‘zhangsan’}</li>
+<li>在页面上 </li>
+</ul>
+<pre><code>&lt;text if=&quot;{{userInfo && userInfo.name}}&quot;&gt;{{userInfo.name || ' '}}&lt;/text&gt;</code></pre><p>上面会报错</p>
+<ul>
+<li><p>然后</p>
+<pre><code>&lt;text if=&quot;{{userInfo && userInfo.name}}&quot;&gt;{{userInfo ？ userInfo.name ： ' '}}&lt;/text&gt; </code></pre></li>
+</ul>
+<p>也会报错</p>
+<ul>
+<li><p>最终 </p>
+<pre><code>&lt;text if=&quot;{{userInfo && userInfo.name}}&quot;&gt;{{userInfo ？( userInfo.name || ' ') ： ' '}}&lt;/text&gt;</code></pre></li>
+</ul>
+<ul>
+<li>终于不报错了</li>
+</ul>
+<h5 id="15-路由传值的时候-protected-偶尔不好使，接收不到参数-可用-this-page-query"><a href="#15-路由传值的时候-protected-偶尔不好使，接收不到参数-可用-this-page-query" class="headerlink" title="15.路由传值的时候 protected 偶尔不好使，接收不到参数,可用 this.$page.query"></a>15.路由传值的时候 protected 偶尔不好使，接收不到参数,可用 this.$page.query</h5><pre><code>console.log(this.$page.query)</code></pre><h5 id="16-URL-跳转配置是指在-H5-页面中可以通过调用接口跳转到应用。"><a href="#16-URL-跳转配置是指在-H5-页面中可以通过调用接口跳转到应用。" class="headerlink" title="16.URL 跳转配置是指在 H5 页面中可以通过调用接口跳转到应用。"></a>16.URL 跳转配置是指在 H5 页面中可以通过调用接口跳转到应用。</h5><ul>
+<li>h5网页拉起快应用时，亲测用protected不好使，可使用this.$page.query，华为手机也可用deeplink方法唤起快应用。但是对手机系统有要求，具体点击这里<a href="https://developer.huawei.com/consumer/cn/service/hms/catalog/fastapp.html?page=fastapp_fastapp_devguide_web_to_fastapp" target="_blank" rel="noopener">文档</a></li>
+</ul>
+<pre><code>appRouter(&apos;com.youth.kandianquickapp&apos;, &apos;/VideoDetails&apos;, { videoId: article_id, webType: &apos;video&apos; })
+
+快应用this.$page.query接收</code></pre><h5 id="17-第三方分享问题"><a href="#17-第三方分享问题" class="headerlink" title="17.第三方分享问题"></a>17.第三方分享问题</h5><p><a href="https://bbs.quickapp.cn/forum.php?mod=viewthread&tid=481" target="_blank" rel="noopener">关于第三方分享</a></p>
+<p>简单来说，就是你需要在微信开放平台注册一个马甲包，然后通过快应用调马甲包原生分享的方式,来进行调用微信分享,在微信开发平台需要注册一个原生Android移动应用，并且审核通过，拿到wxKey,要注意的点如下</p>
+<h6 id="注册马甲包的时候-你需要提供给马甲包一个签名，这个签名是根据你快应的签名，realese签名生成的"><a href="#注册马甲包的时候-你需要提供给马甲包一个签名，这个签名是根据你快应的签名，realese签名生成的" class="headerlink" title="* 注册马甲包的时候,你需要提供给马甲包一个签名，这个签名是根据你快应的签名，realese签名生成的,"></a>* 注册马甲包的时候,你需要提供给马甲包一个签名，这个签名是根据你快应的签名，realese签名生成的,</h6><h6 id="appSign-其实就是对应快应用开发项目sign-release-certificate-pem-文件中-—–BEGIN-CERTIFICATE—–-与-—–END-CERTIFICATE—–-中间的那段-然后用官方的IDE工具-生成md5格式的签名，这个签名就是你微信开发平台马甲包的签名"><a href="#appSign-其实就是对应快应用开发项目sign-release-certificate-pem-文件中-—–BEGIN-CERTIFICATE—–-与-—–END-CERTIFICATE—–-中间的那段-然后用官方的IDE工具-生成md5格式的签名，这个签名就是你微信开发平台马甲包的签名" class="headerlink" title="* appSign 其实就是对应快应用开发项目sign\release\certificate.pem 文件中  —–BEGIN CERTIFICATE—–  与 —–END CERTIFICATE—– 中间的那段,然后用官方的IDE工具,生成md5格式的签名，这个签名就是你微信开发平台马甲包的签名."></a>* appSign 其实就是对应快应用开发项目sign\release\certificate.pem 文件中  —–BEGIN CERTIFICATE—–  与 —–END CERTIFICATE—– 中间的那段,然后用官方的IDE工具,生成md5格式的签名，这个签名就是你微信开发平台马甲包的签名.</h6><h6 id="第三方分享时需要rom支持，部分厂商现有的rom还没有进行第三方分享适配，通过第三方分享出去的信息暂时只能以纯文字形式展示，甚至压根无法进行分享（总结：rom决定快应用能否实现第三方分享应有的效果，快应用渲染器决定第三方分享功能是否可以调起分享功能。）"><a href="#第三方分享时需要rom支持，部分厂商现有的rom还没有进行第三方分享适配，通过第三方分享出去的信息暂时只能以纯文字形式展示，甚至压根无法进行分享（总结：rom决定快应用能否实现第三方分享应有的效果，快应用渲染器决定第三方分享功能是否可以调起分享功能。）" class="headerlink" title="* 第三方分享时需要rom支持，部分厂商现有的rom还没有进行第三方分享适配，通过第三方分享出去的信息暂时只能以纯文字形式展示，甚至压根无法进行分享（总结：rom决定快应用能否实现第三方分享应有的效果，快应用渲染器决定第三方分享功能是否可以调起分享功能。）"></a>* 第三方分享时需要rom支持，部分厂商现有的rom还没有进行第三方分享适配，通过第三方分享出去的信息暂时只能以纯文字形式展示，甚至压根无法进行分享（总结：rom决定快应用能否实现第三方分享应有的效果，快应用渲染器决定第三方分享功能是否可以调起分享功能。）</h6><h4 id="18-list组件横向滚动时，无法使用scrollTo-方法"><a href="#18-list组件横向滚动时，无法使用scrollTo-方法" class="headerlink" title="18.list组件横向滚动时，无法使用scrollTo 方法"></a>18.list组件横向滚动时，无法使用scrollTo 方法</h4><ul>
+<li>(我表弟发现的bug)，官方正在修复中</li>
+</ul>
+<h5 id="19-类似于vue"><a href="#19-类似于vue" class="headerlink" title="19.类似于vue"></a>19.类似于vue</h5><pre><code>:class=&quot;{{a?'b':'cc'}}&quot;,</code></pre><p>动态指定class类名的时候，有时无效.</p>
+<h5 id="20-自定义组件里面的属性只能用data-并且不能和private共存-而且自定义组件，只能修改data里面的值，自定义组件的onShow和onHide生命周期偶尔无法触发"><a href="#20-自定义组件里面的属性只能用data-并且不能和private共存-而且自定义组件，只能修改data里面的值，自定义组件的onShow和onHide生命周期偶尔无法触发" class="headerlink" title="20.自定义组件里面的属性只能用data,并且不能和private共存,而且自定义组件，只能修改data里面的值，自定义组件的onShow和onHide生命周期偶尔无法触发,"></a>20.自定义组件里面的属性只能用data,并且不能和private共存,而且自定义组件，只能修改data里面的值，自定义组件的onShow和onHide生命周期偶尔无法触发,</h5><h5 id="21-快应用页面和内嵌webview页面通信-模拟器无法通信成功-只能在真机上测试"><a href="#21-快应用页面和内嵌webview页面通信-模拟器无法通信成功-只能在真机上测试" class="headerlink" title="21.快应用页面和内嵌webview页面通信(模拟器无法通信成功,只能在真机上测试)"></a>21.快应用页面和内嵌webview页面通信(模拟器无法通信成功,只能在真机上测试)</h5><ul>
+<li><p>只有在trustedurl里面声明的h5链接才可以和快应用通信,支持正则表达式匹配.</p>
+<pre><code>&lt;web id=&quot;web&quot; src=&quot;{{webViewUrl}}&quot; trustedurl=&quot;https://user.youth.cn/html//20200214quickDetails/articleDetails.html&quot; onmessage=&quot;onMessage&quot;&gt;&lt;/web&gt;</code></pre></li>
+</ul>
+<pre><code>// 接收webview传递过来的消息 只能传递string类型
+onMessage(e) {
+    console.log(e.message)  
+},</code></pre><ul>
+<li><p>h5页面发送消息 system 无需引入，在应用下的h5挂载在window对象上</p>
+<pre><code>system.postMessage(&apos;发送消息&apos;)</code></pre></li>
+</ul>
+<h5 id="21-监听页面返回按钮触发"><a href="#21-监听页面返回按钮触发" class="headerlink" title="21.监听页面返回按钮触发"></a>21.监听页面返回按钮触发</h5><ul>
+<li><p>当用户点击返回按钮退出时，可以通过onBackPress事件，return true ,来自己处理逻辑</p>
+<pre><code>this.$page.finish()// 结束当前页面 从本页面退出，结束页面生命周期。
+调用方法：this.$app.exit() // 退出快应用，结束应用生命周期。
+
+onBackPress () {
+    this.$element(&apos;web&apos;).canBack({
+        callback: function (e) {
+        if (e) {
+            // 加载历史列表中的上一个 URL
+            this.$element(&apos;web&apos;).back()
+        } else {
+            router.back()
+        }
+        }.bind(this)
+    })
+    // 阻止默认行为，等待异步操作
+    return true
+}</code></pre></li>
+</ul>
+
+  </article>
+  
+    
+<div class="nexmoe-post-copyright">
+<i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+<strong>本文作者：</strong>毛西亚<br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2020/03/04/技术/前端/快应用/" title="http://yoursite.com/2020/03/04/技术/前端/快应用/" target="_blank" rel="noopener">http://yoursite.com/2020/03/04/技术/前端/快应用/</a><br>
+
+  <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+</div>
+
+
+  
+  <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.5.0/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/js/mdui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+ 
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+ 
+    <script src="https://cdn.jsdelivr.net/npm/smoothscroll-for-websites@1.4.9/SmoothScroll.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="/js/app.js?v=1583338377177"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xtaodada/xtaodada.github.io@0.0.2/copy.js"></script>
+
+
+
+  
+
+
+
+
+
+</body>
+
+</html>
