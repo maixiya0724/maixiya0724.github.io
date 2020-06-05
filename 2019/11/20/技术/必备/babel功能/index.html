@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="毛西亚的博客">
 <meta property="og:description" content="babel7.0 组成部分">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-05-11T06:58:04.082Z">
+<meta property="og:updated_time" content="2020-06-01T07:55:58.678Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="babel7.0 组成部分">
 <meta name="twitter:description" content="babel7.0 组成部分">
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1505827_k6fd86fxksp.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css ">
-  <link rel="stylesheet" href="/css/style.css?v=1590473343374">
+  <link rel="stylesheet" href="/css/style.css?v=1591347993244">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -56,7 +56,7 @@
         </a>
     </div>
     <div class="nexmoe-count">
-        <div><span>文章</span>14</div>
+        <div><span>文章</span>15</div>
         <div><span>标签</span>6</div>
         <div><span>分类</span>4</div>
     </div>
@@ -113,7 +113,7 @@
 
         <li class="category-list-item">
           <a class="category-list-link" href="/categories/技术/">技术</a>
-          <span class="category-list-count">11</span>
+          <span class="category-list-count">12</span>
         </li>
 
         
@@ -170,8 +170,8 @@
     </div>
   <div class="nexmoe-post-meta">
     <a><i class="nexmoefont icon-calendar-fill"></i>2019年11月20日</a>
-    <a><i class="nexmoefont icon-areachart"></i>1.1k 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>1.5k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 7 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/技术/">技术</a>
     
@@ -179,8 +179,8 @@
   </div>
   <article>
     <h1 id="babel7-0-组成部分"><a href="#babel7-0-组成部分" class="headerlink" title="babel7.0 组成部分"></a>babel7.0 组成部分</h1><a id="more"></a>
-<h2 id="1-babel-core-必装"><a href="#1-babel-core-必装" class="headerlink" title="1.@babel/core (必装)"></a>1.@babel/core (必装)</h2><pre><code>babel核心包，编译器，提供转换的API</code></pre><h2 id="2-babel-cli"><a href="#2-babel-cli" class="headerlink" title="2.@babel/cli"></a>2.@babel/cli</h2><pre><code>babel的命令行工具,通过命令对js代码进行转义</code></pre><p>具体命令使用:<a href="https://babeljs.io/docs/en/babel-cli" target="_blank" rel="noopener">https://babeljs.io/docs/en/babel-cli</a><br>启动babel/cli 编译器  /node_modules/.bin/babel 非全局安装<br>将src 目录下的所有js 文件编译成并且输出到 lib 目录下<br>./node_modules/.bin/babel src –out-dir lib<br>要在每次更改文件时编译文件，请使用–watch或-w选项：<br>./node_modules/.bin/babel –watch –out-file script-compiled.js</p>
-<h2 id="3-babel-polyfill"><a href="#3-babel-polyfill" class="headerlink" title="3.@babel/polyfill"></a>3.@babel/polyfill</h2><pre><code>注意babel7中的@babel/polyfill 是 @babel/runtime-corejs2的别名
+<h2 id="1-babel-core-必装"><a href="#1-babel-core-必装" class="headerlink" title="1.@babel/core (必装)"></a>1.@babel/core (必装)</h2><pre><code>babe转译器本身 babel核心包，编译器，提供转换的API,用于对代码的转换，像webpack的babel-loader就是调用这些API来完成转译过程的.</code></pre><h2 id="2-babel-cli"><a href="#2-babel-cli" class="headerlink" title="2.@babel/cli"></a>2.@babel/cli</h2><pre><code>babel的命令行工具,通过命令对js代码进行转义</code></pre><p>具体命令使用:<a href="https://babeljs.io/docs/en/babel-cli" target="_blank" rel="noopener">https://babeljs.io/docs/en/babel-cli</a><br>启动babel/cli 编译器  /node_modules/.bin/babel 非全局安装<br>将src 目录下的所有js 文件编译成并且输出到 lib 目录下<br>./node_modules/.bin/babel src –out-dir lib<br>要在每次更改文件时编译文件，请使用–watch或-w选项：<br>./node_modules/.bin/babel –watch –out-file script-compiled.js</p>
+<h2 id="3-babel-polyfill"><a href="#3-babel-polyfill" class="headerlink" title="3.@babel/polyfill"></a>3.@babel/polyfill</h2><h5 id="babel默认只转换新的js句法，而不转换新的API，比如iteerator，Generator-Set-Map-Proxy-Reflect，Symbol，Promise-等全局对象，以及一些定义在全局对象上的方法，（比如Object-assign）都不会转码，举例来说，es6在array对象上新增的array-from方法，Babel就不会转码这个方法，如果想让这个方法运行，就必须使用babel-polyfill-为当前环境提供一个垫片。Babel默认不转码的API非常多，详细清单可以查看babel-plugin-transform-runtime模块的definitions-js文件"><a href="#babel默认只转换新的js句法，而不转换新的API，比如iteerator，Generator-Set-Map-Proxy-Reflect，Symbol，Promise-等全局对象，以及一些定义在全局对象上的方法，（比如Object-assign）都不会转码，举例来说，es6在array对象上新增的array-from方法，Babel就不会转码这个方法，如果想让这个方法运行，就必须使用babel-polyfill-为当前环境提供一个垫片。Babel默认不转码的API非常多，详细清单可以查看babel-plugin-transform-runtime模块的definitions-js文件" class="headerlink" title="babel默认只转换新的js句法，而不转换新的API，比如iteerator，Generator,Set,Map,Proxy,Reflect，Symbol，Promise,等全局对象，以及一些定义在全局对象上的方法，（比如Object.assign）都不会转码，举例来说，es6在array对象上新增的array.from方法，Babel就不会转码这个方法，如果想让这个方法运行，就必须使用babel-polyfill,为当前环境提供一个垫片。Babel默认不转码的API非常多，详细清单可以查看babel-plugin-transform-runtime模块的definitions.js文件"></a>babel默认只转换新的js句法，而不转换新的API，比如iteerator，Generator,Set,Map,Proxy,Reflect，Symbol，Promise,等全局对象，以及一些定义在全局对象上的方法，（比如Object.assign）都不会转码，举例来说，es6在array对象上新增的array.from方法，Babel就不会转码这个方法，如果想让这个方法运行，就必须使用babel-polyfill,为当前环境提供一个垫片。Babel默认不转码的API非常多，详细清单可以查看babel-plugin-transform-runtime模块的<a href="https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js" target="_blank" rel="noopener">definitions.js</a>文件</h5><pre><code>注意babel7中的@babel/polyfill 是 @babel/runtime-corejs2的别名
 详细地址:https://babeljs.io/docs/en/v7-migration</code></pre><p>babel 7 中说明删除提案polyfill @babel/polyfill 结合 @babel/runtime-corejs2 + @babel/plugin-transform-runtime 插件使用</p>
 <pre><code>babel 编译时只转换语法，几乎可以编译所有时新的 JavaScript 语法，但并不会转化BOM里面不兼容的API
 比如 Promise,Set,Symbol,Array.from,async 等等的一些API
@@ -196,7 +196,16 @@
 <p>在node中 使用@babel/register 让其在require 加载文件的时候babel 自动动态编译</p>
 <pre><code>require(&quot;@babel/register&quot;);
 require(&quot;./test.js&quot;)</code></pre><p>5.Presets</p>
-<p>如 env,stage-0,stage-1等等<br>其中的 env 表示 babel会加载 es6 相关的编译模块，然后 stage-0 表示的是什么呢？<br>stage 系列集合了一些对 es7 的草案支持的插件，由于是草案，所以作为插件的形式提供。</p>
+<p>如 env,stage-0,stage-1等等<br>其中的 env 表示 babel会加载 es6 相关的编译模块，然后 stage-0 表示的是什么呢？<br>stage 系列集合了一些对 es7 的草案支持的插件，由于是草案，所以作为插件的形式提供。<br>如果要自行配置转译过程中使用的各类插件，那太痛苦了，所以babel官方帮我们做了一些预设的插件集，称之为preset，这样我们只需要使用对应的preset就可以了。以JS标准为例，babel提供了如下的一些preset：</p>
+<pre><code>es2015
+es2016
+es2017
+env
+es20xx的preset只转译该年份批准的标准，而env则代指最新的标准，包括了latest和es20xx各年份
+另外，还有 stage-0到stage-4的标准成形之前的各个阶段，这些都是实验版的preset，建议不要使用。</code></pre><p>在.babelrc里面的配置如下</p>
+<pre><code>&quot;presets&quot;: [
+    &quot;@babel/preset-env&quot;
+],</code></pre><p>表示使用最新的标准进行转译</p>
 <p>以下下官方给我们提供的自带的presets:</p>
 <pre><code>babel 无法编译的ES5新语法 详情请移致：https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js</code></pre><h2 id="6-babel-preset-env-必装"><a href="#6-babel-preset-env-必装" class="headerlink" title="6.@babel/preset-env *必装"></a>6.@babel/preset-env *必装</h2><p>包含如下标准：</p>
 <pre><code>@babel/preset-es2015，@babel/preset-es2016和@babel/preset-es2017
@@ -234,7 +243,7 @@ unicode-regex
 exponentiation-operator
 
 //ES2017
-async-to-generator</code></pre><h2 id="7-plugins"><a href="#7-plugins" class="headerlink" title="7.plugins"></a>7.plugins</h2><p>转换以插件的形式出现，插件是小型JavaScript程序，它指示Babel如何对代码进行转换。 </p>
+async-to-generator</code></pre><h2 id="7-plugins"><a href="#7-plugins" class="headerlink" title="7.plugins"></a>7.plugins</h2><p>转换以插件的形式出现，插件是小型JavaScript程序，它指示Babel如何对代码进行转换。 插件应用于babel的转译过程，尤其是第二个阶段transforming，如果这个阶段不使用任何插件，那么babel会原样输出代码。<br>我们主要关注transforming阶段使用的插件，因为transform插件会自动使用对应的词法插件，所以parsing阶段的插件不需要配置。</p>
 <h3 id="7-1-babel-plugin-transform-runtime-必装"><a href="#7-1-babel-plugin-transform-runtime-必装" class="headerlink" title="7.1  @babel/plugin-transform-runtime  *必装"></a>7.1  @babel/plugin-transform-runtime  *必装</h3><p>所有帮助程序都将引用该模块，@babel/runtime以避免编译输出中的重复。运行时将编译到您的构建中。它会将重复的已require 模块方式引入。</p>
 <h3 id="7-2-babel-runtime-corejs2-编译自带ES5语法"><a href="#7-2-babel-runtime-corejs2-编译自带ES5语法" class="headerlink" title="7.2 @babel/runtime-corejs2 编译自带ES5语法"></a>7.2 @babel/runtime-corejs2 编译自带ES5语法</h3><pre><code>如Object.assign 等 根老版本库@babel/polyfill 类似。一般配合@babel/plugin-transform-runtime 使用.详细配置使用见 .babelrc 文件
 
@@ -271,13 +280,13 @@ class MyClass { }
 function annotation(target) {
 target.annotated = true;
 }</code></pre><h2 id="8-配置文件-babelrc"><a href="#8-配置文件-babelrc" class="headerlink" title="8.配置文件.babelrc"></a>8.配置文件.babelrc</h2><pre><code>{
-&quot;presets&quot;: [&quot;@babel/preset-env&quot;],
-&quot;plugins&quot;: [
-    [&quot;@babel/plugin-transform-runtime&quot;,{&quot;corejs&quot;: 2}],
-    &quot;@babel/plugin-transform-object-assign&quot;,
-    [&quot;@babel/plugin-proposal-decorators&quot;, { &quot;legacy&quot;: true }],
-    &quot;@babel/plugin-proposal-class-properties&quot;
-]
+    &quot;presets&quot;: [&quot;@babel/preset-env&quot;],
+    &quot;plugins&quot;: [
+        [&quot;@babel/plugin-transform-runtime&quot;,{&quot;corejs&quot;: 2}],
+        &quot;@babel/plugin-transform-object-assign&quot;,
+        [&quot;@babel/plugin-proposal-decorators&quot;, { &quot;legacy&quot;: true }],
+        &quot;@babel/plugin-proposal-class-properties&quot;
+    ]
 }</code></pre><h2 id="9-package-json"><a href="#9-package-json" class="headerlink" title="9.package.json"></a>9.package.json</h2><pre><code>{
 &quot;name&quot;: &quot;babel&quot;,
 &quot;version&quot;: &quot;1.0.0&quot;,
@@ -347,7 +356,7 @@ target.annotated = true;
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1590473343385"></script>
+<script src="/js/app.js?v=1591347993251"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
