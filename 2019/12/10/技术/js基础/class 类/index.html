@@ -3,7 +3,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
   
-  <title>vue 双向绑定的原理 - 毛西亚的博客</title>
+  <title>js class 类 - 毛西亚的博客</title>
   <meta charset="UTF-8">
   <meta name="description" content="记录生活的所见所闻">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,18 +11,18 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png">
-  <meta name="description" content="js异步操作Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了Promise对象。">
+  <meta name="description" content="js class 是es新增的语法. 文档">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue 双向绑定的原理">
-<meta property="og:url" content="http://yoursite.com/2020/06/22/技术/js基础/异步操作/index.html">
+<meta property="og:title" content="js class 类">
+<meta property="og:url" content="http://yoursite.com/2019/12/10/技术/js基础/class 类/index.html">
 <meta property="og:site_name" content="毛西亚的博客">
-<meta property="og:description" content="js异步操作Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了Promise对象。">
+<meta property="og:description" content="js class 是es新增的语法. 文档">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-07-09T07:08:51.433Z">
+<meta property="og:updated_time" content="2020-06-24T06:05:40.126Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue 双向绑定的原理">
-<meta name="twitter:description" content="js异步操作Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了Promise对象。">
+<meta name="twitter:title" content="js class 类">
+<meta name="twitter:description" content="js class 是es新增的语法. 文档">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
    
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1505827_k6fd86fxksp.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css ">
-  <link rel="stylesheet" href="/css/style.css?v=1594707355726">
+  <link rel="stylesheet" href="/css/style.css?v=1594707356592">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -164,14 +164,14 @@
         <div class="nexmoe-post">
     <div class="nexmoe-post-cover"> 
         
-        <img src="https://upload-images.jianshu.io/upload_images/8560482-d18d5fe20c1ade5c.png?imageMogr2/auto-orient/strip|imageView2/2/w/730/format/webp">
+        <img src="http://i1.073img.com/151201/17598486_162507_1.jpg">
         
-        <h1>vue 双向绑定的原理</h1>
+        <h1>js class 类</h1>
     </div>
   <div class="nexmoe-post-meta">
-    <a><i class="nexmoefont icon-calendar-fill"></i>2020年06月22日</a>
-    <a><i class="nexmoefont icon-areachart"></i>567 字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+    <a><i class="nexmoefont icon-calendar-fill"></i>2019年12月10日</a>
+    <a><i class="nexmoefont icon-areachart"></i>338 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
     
       <a class="nexmoefont icon-appstore-fill -link" href="/categories/技术/">技术</a>
     
@@ -180,42 +180,51 @@
     
   </div>
   <article>
-    <h3 id="js异步操作"><a href="#js异步操作" class="headerlink" title="js异步操作"></a>js异步操作</h3><h3 id="Promise-是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6-将其写进了语言标准，统一了用法，原生提供了Promise对象。"><a href="#Promise-是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6-将其写进了语言标准，统一了用法，原生提供了Promise对象。" class="headerlink" title="Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了Promise对象。"></a>Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了Promise对象。</h3><a id="more"></a>
+    <h4 id="js-class-是es新增的语法-文档"><a href="#js-class-是es新增的语法-文档" class="headerlink" title="js class 是es新增的语法. 文档"></a>js class 是es新增的语法. <a href="https://es6.ruanyifeng.com/#docs/class" target="_blank" rel="noopener">文档</a></h4><a id="more"></a>
 
-<h4 id="1-promise-的含义"><a href="#1-promise-的含义" class="headerlink" title="1.promise 的含义"></a>1.promise 的含义</h4><h5 id="所谓的promise，简单来说就是一个容器，里面保存着某个未来才会结束的事件的结果（通常是一个异步操作），从语法上奖，promise是一个对象，从它可以获取异步操作的消息-Promise提供统一的API，各种异步操作都可以用同样的方法进行处理"><a href="#所谓的promise，简单来说就是一个容器，里面保存着某个未来才会结束的事件的结果（通常是一个异步操作），从语法上奖，promise是一个对象，从它可以获取异步操作的消息-Promise提供统一的API，各种异步操作都可以用同样的方法进行处理" class="headerlink" title="所谓的promise，简单来说就是一个容器，里面保存着某个未来才会结束的事件的结果（通常是一个异步操作），从语法上奖，promise是一个对象，从它可以获取异步操作的消息.Promise提供统一的API，各种异步操作都可以用同样的方法进行处理."></a>所谓的promise，简单来说就是一个容器，里面保存着某个未来才会结束的事件的结果（通常是一个异步操作），从语法上奖，promise是一个对象，从它可以获取异步操作的消息.Promise提供统一的API，各种异步操作都可以用同样的方法进行处理.</h5><h5 id="promise有以下特点"><a href="#promise有以下特点" class="headerlink" title="promise有以下特点"></a>promise有以下特点</h5><ul>
-<li><p>1.对象的状态不受外界影响。promise对象代表一个异步操作，有三种状态 pending(进行中)，fulfilled(已成功)，rejected(已失败)。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态。这也是primise的由来。</p>
-</li>
-<li><p>2.一旦状态发生改变，就不会在变，任何时候都可以得到这个结果。而且状态的改变只有两种可能，一种是从pending变为 resolved(成功)，另一种是pending变为rejected(失败),这要这两种状态发生一种，状态就凝固了，就不会再改变了。就算状态已经发生，你再对promise对象添加回调方法，依然可以得到结果，这与事件（Event）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的。</p>
-</li>
-<li><p>3.缺点  Promise也有一些缺点，1.首先，你无法取消promise，一旦它建立了就会立即执行，无法中途取消。2.如果不设置回调函数，promise内部抛出的错误，不会反映到外部，3.当处于pending的状态的时候，无法得知目前进展到哪一个阶段了(刚刚开始还是即将完成)。</p>
-</li>
-</ul>
-<pre><code>const promise = new Promise(function(resolve, reject) {
-  // ... some code
-
-  if (/* 异步操作成功 */){
-    resolve(value);
-  } else {
-    reject(error);
+<h4 id="class-的基本语法"><a href="#class-的基本语法" class="headerlink" title="class 的基本语法"></a>class 的基本语法</h4><h5 id="1-es6的class-就是es5构造函数的另一种写法-因为es的构造函数写法跟其他的面向对象语言差异很大，很容易让新学这门语言的程序猿干到困惑，所以es6提供了更接近传统语言的写法，引入了class-类这个概念，座位对象的模板，通过class关键子可以定义类。例如"><a href="#1-es6的class-就是es5构造函数的另一种写法-因为es的构造函数写法跟其他的面向对象语言差异很大，很容易让新学这门语言的程序猿干到困惑，所以es6提供了更接近传统语言的写法，引入了class-类这个概念，座位对象的模板，通过class关键子可以定义类。例如" class="headerlink" title="1.es6的class 就是es5构造函数的另一种写法.因为es的构造函数写法跟其他的面向对象语言差异很大，很容易让新学这门语言的程序猿干到困惑，所以es6提供了更接近传统语言的写法，引入了class 类这个概念，座位对象的模板，通过class关键子可以定义类。例如"></a>1.es6的class 就是es5构造函数的另一种写法.因为es的构造函数写法跟其他的面向对象语言差异很大，很容易让新学这门语言的程序猿干到困惑，所以es6提供了更接近传统语言的写法，引入了class 类这个概念，座位对象的模板，通过class关键子可以定义类。例如</h5><pre><code>class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
   }
-});</code></pre><p>另外一个例子</p>
-<pre><code>// 声明一个异步函数
-function timeout (ms){
-  return new Promise((resolve,reject)=&gt;{
-    // 在这里进行异步操作
-    setTimeout(resolve,ms,&apos;done&apos;)
-  })
+
+  toString() {
+    return &apos;(&apos; + this.x + &apos;, &apos; + this.y + &apos;)&apos;;
+  }
+}</code></pre><p>constructor其实就是构造方法，而this关键字代表实例对象，也就是说，es5的构造函数Point对应es6的Point类的构造方法.</p>
+<h5 id="2-构造函数的proitotype属性，在es6上面同样存在，事实上，类的所有方法都定义在类的prototype上"><a href="#2-构造函数的proitotype属性，在es6上面同样存在，事实上，类的所有方法都定义在类的prototype上" class="headerlink" title="2.构造函数的proitotype属性，在es6上面同样存在，事实上，类的所有方法都定义在类的prototype上."></a>2.构造函数的proitotype属性，在es6上面同样存在，事实上，类的所有方法都定义在类的prototype上.</h5><pre><code>class Point {
+  constructor() {
+    // ...
+  }
+
+  toString() {
+    // ...
+  }
+
+  toValue() {
+    // ...
+  }
 }
-timeout(1000).then((value)=&gt;{
-  console.log(value)
-})</code></pre>
+
+// 等同于
+
+Point.prototype = {
+  constructor() {},
+  toString() {},
+  toValue() {},
+};</code></pre><h4 id="3-constructor-方法"><a href="#3-constructor-方法" class="headerlink" title="3.constructor 方法"></a>3.constructor 方法</h4><h5 id="constructor方法是类的默认方法，通过new命令生成对象实例时，自动调用该方法。一个类必须有constructor方法，如果没有显式定义，一个空的constructor方法会被默认添加。"><a href="#constructor方法是类的默认方法，通过new命令生成对象实例时，自动调用该方法。一个类必须有constructor方法，如果没有显式定义，一个空的constructor方法会被默认添加。" class="headerlink" title="constructor方法是类的默认方法，通过new命令生成对象实例时，自动调用该方法。一个类必须有constructor方法，如果没有显式定义，一个空的constructor方法会被默认添加。"></a>constructor方法是类的默认方法，通过new命令生成对象实例时，自动调用该方法。一个类必须有constructor方法，如果没有显式定义，一个空的constructor方法会被默认添加。</h5><h4 id="4-实现继承"><a href="#4-实现继承" class="headerlink" title="4.实现继承"></a>4.实现继承</h4><h5 id="Class可以通过extends关键字实现继承，这比es5的通过修改原型链实现集成，要清晰和方便很多…"><a href="#Class可以通过extends关键字实现继承，这比es5的通过修改原型链实现集成，要清晰和方便很多…" class="headerlink" title="Class可以通过extends关键字实现继承，这比es5的通过修改原型链实现集成，要清晰和方便很多…."></a>Class可以通过extends关键字实现继承，这比es5的通过修改原型链实现集成，要清晰和方便很多….</h5><pre><code>class Point {
+}
+
+class ColorPoint extends Point {
+
+}</code></pre>
   </article>
   
     
 <div class="nexmoe-post-copyright">
 <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
 <strong>本文作者：</strong>毛西亚<br>
-<strong>本文链接：</strong><a href="http://yoursite.com/2020/06/22/技术/js基础/异步操作/" title="http://yoursite.com/2020/06/22/技术/js基础/异步操作/" target="_blank" rel="noopener">http://yoursite.com/2020/06/22/技术/js基础/异步操作/</a><br>
+<strong>本文链接：</strong><a href="http://yoursite.com/2019/12/10/技术/js基础/class 类/" title="http://yoursite.com/2019/12/10/技术/js基础/class 类/" target="_blank" rel="noopener">http://yoursite.com/2019/12/10/技术/js基础/class 类/</a><br>
 
   <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
 
@@ -255,7 +264,7 @@ timeout(1000).then((value)=&gt;{
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1594707355742"></script>
+<script src="/js/app.js?v=1594707356607"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
