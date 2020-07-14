@@ -11,18 +11,18 @@
   
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/png">
-  <meta name="description" content="vue 方法技巧总结1.监听组件的生命周期1.监测自身组件的生命周期在自身组件内，监测生命周期钩子函数  this.$on(‘hook:mounted’, () =&amp;gt; {}) this.$on(&amp;apos;hook:mounted&amp;apos;, () =&amp;gt; {})2.外部监测生命周期函数通过@hook:updated监听组件的updated生命钩子函数   组件的所有生命周期钩子都可以">
+  <meta name="description" content="vue 方法技巧总结">
 <meta name="keywords" content="技术">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue 方法总结">
 <meta property="og:url" content="http://yoursite.com/2020/07/13/技术/vue/vue总结/index.html">
 <meta property="og:site_name" content="毛西亚的博客">
-<meta property="og:description" content="vue 方法技巧总结1.监听组件的生命周期1.监测自身组件的生命周期在自身组件内，监测生命周期钩子函数  this.$on(‘hook:mounted’, () =&amp;gt; {}) this.$on(&amp;apos;hook:mounted&amp;apos;, () =&amp;gt; {})2.外部监测生命周期函数通过@hook:updated监听组件的updated生命钩子函数   组件的所有生命周期钩子都可以">
+<meta property="og:description" content="vue 方法技巧总结">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-07-13T06:49:35.394Z">
+<meta property="og:updated_time" content="2020-07-14T06:45:33.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue 方法总结">
-<meta name="twitter:description" content="vue 方法技巧总结1.监听组件的生命周期1.监测自身组件的生命周期在自身组件内，监测生命周期钩子函数  this.$on(‘hook:mounted’, () =&amp;gt; {}) this.$on(&amp;apos;hook:mounted&amp;apos;, () =&amp;gt; {})2.外部监测生命周期函数通过@hook:updated监听组件的updated生命钩子函数   组件的所有生命周期钩子都可以">
+<meta name="twitter:description" content="vue 方法技巧总结">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@0.4.3/dist/css/mdui.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.15.8/styles/atom-one-dark.css">
    
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1505827_k6fd86fxksp.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css ">
-  <link rel="stylesheet" href="/css/style.css?v=1594707356024">
+  <link rel="stylesheet" href="/css/style.css?v=1594709141373">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -180,7 +180,8 @@
     
   </div>
   <article>
-    <h3 id="vue-方法技巧总结"><a href="#vue-方法技巧总结" class="headerlink" title="vue 方法技巧总结"></a>vue 方法技巧总结</h3><h4 id="1-监听组件的生命周期"><a href="#1-监听组件的生命周期" class="headerlink" title="1.监听组件的生命周期"></a>1.监听组件的生命周期</h4><h5 id="1-监测自身组件的生命周期"><a href="#1-监测自身组件的生命周期" class="headerlink" title="1.监测自身组件的生命周期"></a>1.监测自身组件的生命周期</h5><p>在自身组件内，监测生命周期钩子函数  this.$on(‘hook:mounted’, () =&gt; {})</p>
+    <h3 id="vue-方法技巧总结"><a href="#vue-方法技巧总结" class="headerlink" title="vue 方法技巧总结"></a>vue 方法技巧总结</h3><a id="more"></a>
+<h4 id="1-监听组件的生命周期"><a href="#1-监听组件的生命周期" class="headerlink" title="1.监听组件的生命周期"></a>1.监听组件的生命周期</h4><h5 id="1-监测自身组件的生命周期"><a href="#1-监测自身组件的生命周期" class="headerlink" title="1.监测自身组件的生命周期"></a>1.监测自身组件的生命周期</h5><p>在自身组件内，监测生命周期钩子函数  this.$on(‘hook:mounted’, () =&gt; {})</p>
 <pre><code>this.$on(&apos;hook:mounted&apos;, () =&gt; {})</code></pre><h5 id="2-外部监测生命周期函数"><a href="#2-外部监测生命周期函数" class="headerlink" title="2.外部监测生命周期函数"></a>2.外部监测生命周期函数</h5><p>通过@hook:updated监听组件的updated生命钩子函数   组件的所有生命周期钩子都可以通过@hook:钩子函数名 来监听触发<br> &lt;Child  @hook:mounted=’hookMouted’ /&gt;</p>
 <h5 id="3-最小化vuex"><a href="#3-最小化vuex" class="headerlink" title="3.最小化vuex"></a>3.最小化vuex</h5><p>开发小项目的时候，vuex会显得繁琐庞大，这时候我们可以用 vue2.6新增的API vye.observable 手动打造一个vuex</p>
 <p>创造 store</p>
@@ -267,7 +268,7 @@ export default {
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1594707356031"></script>
+<script src="/js/app.js?v=1594709141387"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 

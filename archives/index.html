@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/font_1505827_k6fd86fxksp.css">
   
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1038733_0xvrvpg9c0r.css ">
-  <link rel="stylesheet" href="/css/style.css?v=1594707356184">
+  <link rel="stylesheet" href="/css/style.css?v=1594709141796">
 </head>
 
 <body class="mdui-drawer-body-left">
@@ -184,47 +184,7 @@
         </div>
         <article>
             
-            <h3 id="vue-方法技巧总结"><a href="#vue-方法技巧总结" class="headerlink" title="vue 方法技巧总结"></a>vue 方法技巧总结</h3><h4 id="1-监听组件的生命周期"><a href="#1-监听组件的生命周期" class="headerlink" title="1.监听组件的生命周期"></a>1.监听组件的生命周期</h4><h5 id="1-监测自身组件的生命周期"><a href="#1-监测自身组件的生命周期" class="headerlink" title="1.监测自身组件的生命周期"></a>1.监测自身组件的生命周期</h5><p>在自身组件内，监测生命周期钩子函数  this.$on(‘hook:mounted’, () =&gt; {})</p>
-<pre><code>this.$on(&apos;hook:mounted&apos;, () =&gt; {})</code></pre><h5 id="2-外部监测生命周期函数"><a href="#2-外部监测生命周期函数" class="headerlink" title="2.外部监测生命周期函数"></a>2.外部监测生命周期函数</h5><p>通过@hook:updated监听组件的updated生命钩子函数   组件的所有生命周期钩子都可以通过@hook:钩子函数名 来监听触发<br> &lt;Child  @hook:mounted=’hookMouted’ /&gt;</p>
-<h5 id="3-最小化vuex"><a href="#3-最小化vuex" class="headerlink" title="3.最小化vuex"></a>3.最小化vuex</h5><p>开发小项目的时候，vuex会显得繁琐庞大，这时候我们可以用 vue2.6新增的API vye.observable 手动打造一个vuex</p>
-<p>创造 store</p>
-<pre><code>import Vue from &apos;vue&apos;
-
-// 通过Vue.observable创建一个可响应的对象
-export const store = Vue.observable({
-  userInfo: {},
-  roleIds: []
-})
-
-// 定义 mutations, 修改属性
-export const mutations = {
-  setUserInfo(userInfo) {
-    store.userInfo = userInfo
-  },
-  setRoleIds(roleIds) {
-    store.roleIds = roleIds
-  }
-}</code></pre><p>在组件内使用 与计算属性一起使用更加简便</p>
-<pre><code>&lt;template&gt;
-  &lt;div&gt;
-    {{ userInfo.name }}
-  &lt;/div&gt;
-&lt;/template&gt;
-&lt;script&gt;
-import { store, mutations } from &apos;../store&apos;
-export default {
-  computed: {
-    userInfo() {
-      return store.userInfo
-    }
-  },
-  created() {
-    mutations.setUserInfo({
-      name: &apos;子君&apos;
-    })
-  }
-}
-&lt;/script&gt;</code></pre>
+            <h3 id="vue-方法技巧总结"><a href="#vue-方法技巧总结" class="headerlink" title="vue 方法技巧总结"></a>vue 方法技巧总结</h3>
             
         </article>
     </div>
@@ -289,33 +249,6 @@ export default {
     </div>
     
     <div class="nexmoe-post">
-        <a href="/2020/06/22/技术/js基础/异步操作/">
-            <div class="nexmoe-post-cover mdui-ripple"> 
-                
-                <img src="https://upload-images.jianshu.io/upload_images/8560482-d18d5fe20c1ade5c.png?imageMogr2/auto-orient/strip|imageView2/2/w/730/format/webp" alt="vue 双向绑定的原理">
-                
-                <h1>vue 双向绑定的原理</h1>
-            </div>
-        </a>
-        <div class="nexmoe-post-meta">
-            <a><i class="nexmoefont icon-calendar-fill"></i>2020年06月22日</a>
-            <a><i class="nexmoefont icon-areachart"></i>567 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
-            
-                <a class="nexmoefont icon-appstore-fill -link" href="/categories/技术/">技术</a>
-            
-            
-                <a class="nexmoefont icon-tag-fill -link" href="/tags/技术/">技术</a>
-            
-        </div>
-        <article>
-            
-            <h3 id="js异步操作"><a href="#js异步操作" class="headerlink" title="js异步操作"></a>js异步操作</h3><h3 id="Promise-是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6-将其写进了语言标准，统一了用法，原生提供了Promise对象。"><a href="#Promise-是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6-将其写进了语言标准，统一了用法，原生提供了Promise对象。" class="headerlink" title="Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了Promise对象。"></a>Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了Promise对象。</h3>
-            
-        </article>
-    </div>
-    
-    <div class="nexmoe-post">
         <a href="/2020/06/22/技术/vue/vue双向绑定的原理/">
             <div class="nexmoe-post-cover mdui-ripple"> 
                 
@@ -338,6 +271,33 @@ export default {
         <article>
             
             <h4 id="vue-双向绑定的原理"><a href="#vue-双向绑定的原理" class="headerlink" title="vue 双向绑定的原理"></a>vue 双向绑定的原理</h4>
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2020/06/22/技术/js基础/异步操作/">
+            <div class="nexmoe-post-cover mdui-ripple"> 
+                
+                <img src="https://upload-images.jianshu.io/upload_images/8560482-d18d5fe20c1ade5c.png?imageMogr2/auto-orient/strip|imageView2/2/w/730/format/webp" alt="vue 双向绑定的原理">
+                
+                <h1>vue 双向绑定的原理</h1>
+            </div>
+        </a>
+        <div class="nexmoe-post-meta">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年06月22日</a>
+            <a><i class="nexmoefont icon-areachart"></i>567 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 2 分钟</a>
+            
+                <a class="nexmoefont icon-appstore-fill -link" href="/categories/技术/">技术</a>
+            
+            
+                <a class="nexmoefont icon-tag-fill -link" href="/tags/技术/">技术</a>
+            
+        </div>
+        <article>
+            
+            <h3 id="js异步操作"><a href="#js异步操作" class="headerlink" title="js异步操作"></a>js异步操作</h3><h3 id="Promise-是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6-将其写进了语言标准，统一了用法，原生提供了Promise对象。"><a href="#Promise-是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6-将其写进了语言标准，统一了用法，原生提供了Promise对象。" class="headerlink" title="Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了Promise对象。"></a>Promise 是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6 将其写进了语言标准，统一了用法，原生提供了Promise对象。</h3>
             
         </article>
     </div>
@@ -532,7 +492,7 @@ $(window).unbind(&apos;取消绑定beforeunload&apos;)</code></pre></li>
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<script src="/js/app.js?v=1594707356193"></script>
+<script src="/js/app.js?v=1594709141805"></script>
 <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.1.0/lazysizes.min.js"></script>
 
 
